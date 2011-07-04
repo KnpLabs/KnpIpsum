@@ -30,7 +30,10 @@ class Contact
      */
     public function dummySend()
     {
-        return "Here I could be sending my message";
+        return sprintf('Here I could be sending your "%s" message from %s',
+            $this->getMessage(),
+            $this->getEmail()
+        );
     }
 
     /**
