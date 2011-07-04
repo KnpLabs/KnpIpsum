@@ -41,6 +41,7 @@ li { padding-top: 9px; padding-bottom: 9px; }
 ol li { list-style-type: decimal; }
 ul li { list-style-type: none; }
 pre.code_block { margin-bottom: 20px; background: #EEEEEE; padding: 1px; }
+span.code_path { display: block; background: #ccc; padding: 5px; width: 918px; font-size: 12px; color: #fff; }
 .ipsum-content pre.code_block:last-child { margin-bottom:0px; }
 #ipsum-header { position: relative; padding: 0; }
 #tagline {color: #D64822; font-family: georgia; font-size: 22px; font-style: italic; left: 160px; position: absolute; text-align: left; top: 50px; width: 430px;}

@@ -37,19 +37,23 @@ class IpsumExtension extends \Twig_Extension
 
     public function getCode($template)
     {
+        $controllerPath = $this->getControllerPath();
+        $templatePath = $this->getTemplatePath($template);
+
         $controller = preg_replace('/^\s{4}/m', '', $this->cleanCode($this->getControllerCode()));
         $template = $this->getTemplateCode($template);
 
         // remove the code block
         $template = str_replace('{% set code = code(_self) %}', '', $template);
-        
         $template = $this->cleanCode($template);
         
         return <<<EOF
 <h3>Controller Code</h3>
+<span class="code_path">$controllerPath</span>
 <pre class="code_block"><code>$controller</code></pre>
 
 <h3>Template Code</h3>
+<span class="code_path">$templatePath</span>
 <pre class="code_block"><code>$template</code></pre>
 EOF;
     }
@@ -64,9 +68,22 @@ EOF;
         return '    '.$m->getDocComment()."\n".implode('', array_slice($code, $m->getStartline() - 1, $m->getEndLine() - $m->getStartline() + 1));
     }
 
+    protected function getControllerPath()
+    {
+        $r = new \ReflectionClass($this->controller[0]);
+        $m = $r->getMethod($this->controller[1]);
+
+        return preg_replace('/^.*(src\/Knp\/IpsumBundle\/Controller)/', '$1', $r->getFilename()) . ':' . $m->getStartline();
+    }
+
     protected function getTemplateCode($template)
     {
         return $this->loader->getSource($template->getTemplateName());
+    }
+
+    protected function getTemplatePath($template)
+    {
+        return preg_replace('/Knp([^:]+)\:([^:]+)\:/', 'src/Knp/$1/Resources/views/$2/', $template->getTemplateName());
     }
 
     /**
