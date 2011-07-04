@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/knpipsum/css/ipsum.css') }}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{{ asset('bundles/knpipsum/css/highlight.css') }}" type="text/css" media="all" />
         {% endblock %}
         <title>{% block title %}Ipsum Bundle{% endblock %} - KnpIpsum</title>
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
@@ -47,5 +48,10 @@
                 <div class="ipsum-content">{{ code|raw }}</div>
             {% endif %}
         </div>
+
+        <script src="{{ asset('bundles/knpipsum/js/highlight.pack.js') }}"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
     </body>
 </html>
