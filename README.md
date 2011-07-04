@@ -12,6 +12,9 @@ The demo is available online at http://knpipsum.knplabs.com
 
 Browse the code on [github](https://github.com/knplabs/KnpIpsum-for-symfony).
 
+You can also [download a clean ready-to-use zipball](http://j.mp/jeyTPY) 
+as your base project (no git history).
+
 Requirements
 ------------
 
