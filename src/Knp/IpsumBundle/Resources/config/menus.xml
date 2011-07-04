@@ -10,7 +10,7 @@
 
     <services>
         <service id="menu.ipsum" class="%menu.ipsum.class%" scope="request">
-            <tag name="menu" alias="ipsum" />
+            <tag name="knp_menu.menu" alias="ipsum" />
             <argument type="service" id="request" />
             <argument type="service" id="router" />
         </service>
