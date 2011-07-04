@@ -37,7 +37,7 @@ class IpsumExtension extends \Twig_Extension
 
     public function getCode($template)
     {
-        $controller = $this->cleanCode($this->getControllerCode());
+        $controller = preg_replace('/^\s{4}/m', '', $this->cleanCode($this->getControllerCode()));
         $template = $this->getTemplateCode($template);
 
         // remove the code block
