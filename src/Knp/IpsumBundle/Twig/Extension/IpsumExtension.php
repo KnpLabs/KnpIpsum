@@ -47,10 +47,10 @@ class IpsumExtension extends \Twig_Extension
         
         return <<<EOF
 <h3>Controller Code</h3>
-<pre class="code_block">$controller</pre>
+<pre class="code_block"><code>$controller</code></pre>
 
 <h3>Template Code</h3>
-<pre class="code_block">$template</pre>
+<pre class="code_block"><code>$template</code></pre>
 EOF;
     }
 
