@@ -1,0 +1,25 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "FOSRestBundle" %}
+
+{% block content %}
+    <h1>Simple page using FOSRestBundle</h1>
+
+    <p>
+        FOSRestBundle allows to support easily different out put formats
+        by keeping the controller format-agnostic. The same controller
+        is used to output the list of things in
+        <a href="{{ path('_ipsum_fos_rest', {'_format':'json'}) }}">JSON</a>.
+    </p>
+    {% if things %}
+        <ul>
+        {% for thing in things %}
+            <li>* {{ thing.name }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>− There are no things yet!</p>
+    {% endif %}
+{% endblock %}
+
+{% set code = code(_self) %}

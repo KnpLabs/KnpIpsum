@@ -1,0 +1,25 @@
+{% extends "KnpIpsumBundle:GedmoExtensions:layout.html.twig" %}
+
+{% block content_gedmo %}
+    <h1>List of things</h1>
+
+    <p>Here is the list of things from your database:</p>
+
+    {% if things %}
+        <ul>
+        {% for thing in things %}
+            <li>
+                * {{ thing.name }}
+                − created at {{ thing.createdAt|date }} and updated at {{ thing.updatedAt|date }}
+                − <a href="{{ path('_ipsum_gedmo_extensions_update', {'id': thing.id}) }}">UPDATE</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>− There are no things yet!</p>
+    {% endif %}
+
+    <p>You should have a look at <pre>src/Knp/IpsumBundle/Entity/TimedThing.php</pre></p>
+{% endblock %}
+
+{% set code = code(_self) %}

@@ -1,0 +1,3 @@
+_ipsum_assetic:
+    pattern:  /ipsum/assetic
+    defaults: { _controller: KnpIpsumBundle:Assetic:index }

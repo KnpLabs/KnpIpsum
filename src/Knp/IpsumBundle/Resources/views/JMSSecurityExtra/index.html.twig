@@ -1,0 +1,11 @@
+{% extends "KnpIpsumBundle:Secured:layout.html.twig" %}
+
+{% block title "JMSSecurityExtra" %}
+
+{% block content %}
+    <h1>A normal page</h1>
+
+    <a href="{{ path('_ipsum_jms_securityextra_admin') }}">Secured page for <strong>admin</strong> only</a> (secured by JMSSecurityExtra annotations in the controller).
+{% endblock %}
+
+{% set code = code(_self) %}

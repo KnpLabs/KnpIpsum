@@ -1,0 +1,3 @@
+_ipsum_form:
+    pattern:  /ipsum/form
+    defaults: { _controller: KnpIpsumBundle:Form:contact }

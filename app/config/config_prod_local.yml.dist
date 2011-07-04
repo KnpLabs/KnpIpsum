@@ -1,0 +1,21 @@
+imports:
+    - { resource: config_prod.yml }
+
+framework:
+    secret: ThisIsNotSecretChangeIt
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     localhost
+        dbname:   ipsum_dev
+        user:     root
+        password: ~
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: smtp
+    host: localhost
+    username: ~
+    password: ~

@@ -1,0 +1,14 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "Forms" %}
+
+{% block content %}
+    <h1>A sample contact form</h1>
+    
+    <form action="" method="POST">
+        {{ form_errors(form) }}
+
+        {{ form_rest(form) }}
+        <input type="submit" value="Send" />
+    </form>
+{% endblock %}

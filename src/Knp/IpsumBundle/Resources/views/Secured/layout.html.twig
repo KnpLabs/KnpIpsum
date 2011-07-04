@@ -1,0 +1,9 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "Security" %}
+
+{% block security %}
+    logged in as <strong>{{ app.user ? app.user.username : 'Anonymous' }}</strong>
+    <br/>
+    <a href="{{ path('_ipsum_logout') }}">Logout</a>
+{% endblock %}

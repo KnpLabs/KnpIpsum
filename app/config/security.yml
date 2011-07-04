@@ -1,0 +1,37 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        in_memory:
+            users:
+                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        login:
+            pattern:  ^/ipsum/secured/login$
+            security: false
+
+        secured_area:
+            pattern:    ^/ipsum/secured/
+            form_login:
+                check_path: /ipsum/secured/login_check
+                login_path: /ipsum/secured/login
+            logout:
+                path:   /ipsum/secured/logout
+                target: /ipsum
+            #anonymous: ~
+            #http_basic:
+            #    realm: "Secured Ipsum Area"
+
+    access_control:
+        - { path: /ipsum/secured/admin, roles: ROLE_ADMIN }

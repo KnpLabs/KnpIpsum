@@ -1,0 +1,53 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "Hello world" %}
+
+{% block content %}
+    <h1>A sample twig template</h1>
+    
+    <p>Hello <strong>{{ name }}</strong>, how are you today?</p>
+
+    <p>You can replace {{ name }} by your name in the url.</p>
+    
+    <p>Notice how you can use the name variable in the template.
+    It comes from the controller, have a look at it!</p>
+    
+     <p>In this template we have redefined the "content" block from the layout file
+    (src/Knp/IpsumBundle/Resources/views/layout.php)</p>
+
+    <h1>Twig examples</h1>
+    
+    <h2>Loops, if…</h2>
+    
+    {% if true %}
+        <ul>
+        {% for name, type in {'edgar': 'cat', 'bob': 'dog'} %}
+            <li><strong>{{ name }}</strong> is a {{ type }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <h2>Comments</h2>
+    
+    {# Well this is a comment #}
+    
+    <h2>Tags</h2>
+    
+    {% spaceless %}
+        <div>
+            <strong>foo</strong>
+        </div>
+    {% endspaceless %}
+    {# output will be <div><strong>foo</strong></div> #}
+    
+    <h2>Include</h2>
+    
+    {% include 'KnpIpsumBundle:Twig:included.html.twig' with {'msg': 'ok it works'} %}
+    
+    <h2>Filters</h2>
+    
+    <p>What's the best: {{ [1, 2, 3]|join(' or ') }}?</p>
+    
+{% endblock %}
+
+{% set code = code(_self) %}

@@ -1,0 +1,15 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "SwiftmailerBundle" %}
+
+{% block content %}
+    <h1>How to send emails</h1>
+
+    <form action="{{ path('_ipsum_swiftmailer_send') }}" method="get" accept-charset="utf-8">
+        
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="" id="email">
+        
+        <p><input type="submit" value="Send"></p>
+    </form>
+{% endblock %}

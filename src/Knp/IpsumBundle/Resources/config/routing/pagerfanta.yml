@@ -1,0 +1,3 @@
+_ipsum_pagerfanta:
+    pattern:  /ipsum/pagerfanta
+    defaults: { _controller: KnpIpsumBundle:Pagerfanta:index }

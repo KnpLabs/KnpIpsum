@@ -1,0 +1,11 @@
+{% extends "KnpIpsumBundle:Secured:layout.html.twig" %}
+
+{% block title "JMSSecurityExtra" %}
+
+{% block content %}
+    <h1>This page is secured by JMSSecurityExtra</h1>
+    
+    <p>If you see this, you are logged in as an admin.</p>
+{% endblock %}
+
+{% set code = code(_self) %}

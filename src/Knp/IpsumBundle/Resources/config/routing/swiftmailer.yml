@@ -1,0 +1,7 @@
+_ipsum_swiftmailer:
+    pattern:  /ipsum/swiftmailer
+    defaults: { _controller: KnpIpsumBundle:Swiftmailer:index }
+
+_ipsum_swiftmailer_send:
+    pattern:  /ipsum/swiftmailer/send
+    defaults: { _controller: KnpIpsumBundle:Swiftmailer:send }

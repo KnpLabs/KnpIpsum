@@ -1,0 +1,85 @@
+imports:
+    - { resource: security.yml }
+
+framework:
+    secret:          betterPuttingThisInTheLocalConfigFile
+    charset:         UTF-8
+    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    form:            true
+    csrf_protection: true
+    validation:      { enable_annotations: true }
+    templating:      { engines: ['twig'] }
+    session:
+        default_locale: en
+        auto_start:     true
+    translator: ~
+
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    filters:
+        cssrewrite: ~
+        closure:
+            # We will use Google web API here.
+            # You could also download your own jar
+            # jar: %kernel.root_dir%/java/compiler.jar
+            jar: false
+        # yui_css:
+        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     localhost
+        dbname:   ipsum_prod
+        user:     root
+        password: ~
+        charset:  UTF8
+
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true
+        mappings:
+            StofDoctrineExtensionsBundle: false
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: smtp
+
+jms_security_extra:
+    secure_controllers:  true
+    secure_all_services: false
+
+avalanche_imagine:
+    web_root:     %kernel.root_dir%/../web
+    cache_prefix: imagine
+    driver:       gd
+    filters:
+        thumbnail:
+            type:    thumbnail
+            options: { size: [300, 300], mode: outbound }
+        little_nice_thumbnail:
+            type:    thumbnail
+            options: { size: [150, 150], mode: outbound }
+
+knp_menu:
+    twig: true
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            translatable: false
+            loggable: false
+            tree: false
+
+fos_rest:
+    normalizers:
+        - knp_ipsum.normalizer.datetime
+        - fos_rest.get_set_method_normalizer

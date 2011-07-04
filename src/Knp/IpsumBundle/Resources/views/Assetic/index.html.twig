@@ -1,0 +1,30 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "AsseticBundle" %}
+
+{% block content %}
+    <h1>Concatenate and filter your javascripts with Assetic</h1>
+    
+    <p>Here we are using Google Closure API to minify your two javascripts
+        (assetic-demo-0.js and assetic-demo-1.js).</p>
+    
+    <p>In production, it would also compile the two files in one single file.</p>
+    
+    <p>You could also use YuiCSS to do the same thing with CSS, or even 
+        <a href="http://lesscss.org/">less</a> or <a href="http://sass-lang.com/">Sass</a>
+        as a dynamic stylesheet language which would be converted to css by 
+        assetic filters.</p>
+    
+    {% javascripts
+        'bundles/knpipsum/js/assetic-demo-0.js'
+        'bundles/knpipsum/js/assetic-demo-1.js'
+        filter='closure'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <p>Nice, isn't it?</p>
+
+{% endblock %}
+
+{% set code = code(_self) %}

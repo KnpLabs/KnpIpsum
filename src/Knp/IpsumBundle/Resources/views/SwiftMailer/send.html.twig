@@ -1,0 +1,13 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "SwiftmailerBundle" %}
+
+{% block content %}
+    <h1>How to send emails</h1>
+
+    <p>Now you know how to send an email.</p>
+    <p>You should configure your smtp or sendmail server in 
+        <strong>app/config/parameters.ini</strong> to make this work though…</p>
+{% endblock %}
+
+{% set code = code(_self) %}

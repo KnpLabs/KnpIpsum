@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/knpipsum/css/ipsum.css') }}" type="text/css" media="all" />
+        {% endblock %}
+        <title>{% block title %}Ipsum Bundle{% endblock %} - KnpIpsum</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div id="ipsum-wrapper">
+            <div id="ipsum-header">
+                <div id="by-knplabs">Brought to you with tenderness by the <a href="http://www.knplabs.com/">Knp team</a></div>
+                <a class="img-link" href="{{ path('_ipsum') }}">
+                    <img src="{{ asset('bundles/knpipsum/images/knpipsum.jpg') }}" alt="KnpIpsum">
+                </a>
+                <p id="tagline">A Symfony2 Tutorial Application</p>
+            </div>
+
+            {% block content_header %}
+                <ul id="nav-main">
+                    <li class="first"><a href="{{ path('_ipsum') }}">Home</a></li>
+                    <li><a href="http://www.knplabs.com/en/knpipsum-symfony2-tutorial-project-builder">Download KnpIpsum</a></li>
+                    <li class="last"><a href="https://github.com/knplabs/KnpIpsum-for-symfony">Fork me on github</a></li>
+                </ul>
+
+                <div style="clear: both"></div>
+            {% endblock %}
+
+            <div id="ipsum-security">{% block security %}{% endblock %}</div>
+            <h1 class="content-title">{{ block('title') }}</h1>
+
+            {% if app.session.flash('notice') %}
+                <div class="flash-message">
+                    <em>Notice</em>: {{ app.session.flash('notice') }}
+                </div>
+            {% endif %}
+
+            <div class="ipsum-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+            {% if code is defined %}
+                <h2>Code behind this page</h2>
+                <div class="ipsum-content">{{ code|raw }}</div>
+            {% endif %}
+        </div>
+    </body>
+</html>

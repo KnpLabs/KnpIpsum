@@ -1,0 +1,7 @@
+{% extends "KnpIpsumBundle:Secured:layout.html.twig" %}
+
+{% block content %}
+    <h1>This page only viewable by Admins</h1>
+{% endblock %}
+
+{% set code = code(_self) %}

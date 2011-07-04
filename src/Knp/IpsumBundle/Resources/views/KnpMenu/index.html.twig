@@ -1,0 +1,15 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "KnpMenuBundle" %}
+
+{% block content %}
+    <nav>
+        {{ menu('ipsum') }}
+    </nav>
+    <div style="clear:both"></div>
+    <div>
+        This is the demo page of {{ name }}.
+    </div>
+{% endblock %}
+
+{% set code = code(_self) %}

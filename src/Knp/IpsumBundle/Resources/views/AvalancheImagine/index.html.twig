@@ -1,0 +1,17 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "AvalancheImagineBundle" %}
+
+{% block content %}
+    <h1>A first filter</h1>
+    <div>
+        <img src="{{ 'bundles/knpipsum/images/edgar-in-black.jpg'|apply_filter('thumbnail') }}" />
+    </div>
+    
+    <h1>A second filter</h1>
+    <div>
+        <img src="{{ 'bundles/knpipsum/images/edgar-in-black.jpg'|apply_filter('little_nice_thumbnail') }}" />
+    </div>
+{% endblock %}
+
+{% set code = code(_self) %}

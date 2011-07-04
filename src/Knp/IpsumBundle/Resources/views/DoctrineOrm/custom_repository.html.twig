@@ -1,0 +1,29 @@
+{% extends "KnpIpsumBundle:DoctrineOrm:layout.html.twig" %}
+
+{% block content_doctrine %}
+    <h1>Things finishing with the string "{{ finish }}"</h1>
+
+    <form action="" method="get" accept-charset="utf-8">
+        <label for="query">I want the things whose name finish with: </label>
+        <input type="text" name="q" value="{{ finish }}" id="q">
+        <p><input type="submit" value="Search"></p>
+    </form>
+
+    <p>
+        This query will also use a JOIN operation to avoid doing multiple
+         requests while fetching the categories.<br/>
+        Your database will be proud of you.
+    </p>
+    
+    {% if things %}
+        <ul>
+        {% for thing in things %}
+            <li>* {{ thing.identifyYourselfPlease }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>− There are no things yet!</p>
+    {% endif %}
+{% endblock %}
+
+{% set code = code(_self) %}

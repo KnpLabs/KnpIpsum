@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="twig.extension.knplabs.ipsum" class="Knp\IpsumBundle\Twig\Extension\IpsumExtension" public="false">
+            <tag name="twig.extension" />
+            <argument type="service" id="twig.loader" />
+        </service>
+
+        <service id="knplabs.ipsum.listener" class="Knp\IpsumBundle\EventListener\ControllerListener">
+            <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
+            <argument type="service" id="twig.extension.knplabs.ipsum" />
+        </service>
+
+        <service id="knp_ipsum.normalizer.datetime" class="Knp\IpsumBundle\Serializer\Normalizer\DateTimeNormalizer" />
+    </services>
+</container>
