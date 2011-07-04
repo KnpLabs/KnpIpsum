@@ -1,7 +1,6 @@
 <?php
 
 use Symfony\Component\ClassLoader\UniversalClassLoader;
-use Doctrine\Common\Annotations\AnnotationRegistry;
 
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
@@ -45,15 +44,6 @@ $loader->registerNamespaceFallbacks(array(
     __DIR__.'/../src',
 ));
 $loader->register();
-
-// Registering the annotations
-AnnotationRegistry::registerLoader(function($class) use ($loader) {
-    $loader->loadClass($class);
-    return class_exists($class, false);
-});
-AnnotationRegistry::registerFile(
-    __DIR__.'/../vendor/doctrine/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php'
-);
 
 // Swiftmailer needs a special autoloader to allow
 // the lazy loading of the init file (which is expensive)
