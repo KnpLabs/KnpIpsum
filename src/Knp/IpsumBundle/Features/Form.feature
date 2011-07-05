@@ -17,6 +17,4 @@ Feature: Form component
     When I fill in "Your email:" with "konstantin.kudryashov@knplabs.com"
     And fill in "Your delightful message:" with "test message"
     And press "Send"
-    Then I should see "Notice: Here I could be sending your"
-    And should see "test message"
-    And should see "from konstantin.kudryashov@knplabs.com"
+    Then I should see "Notice: Here I could be sending your \"test message\" message from konstantin.kudryashov@knplabs.com"
