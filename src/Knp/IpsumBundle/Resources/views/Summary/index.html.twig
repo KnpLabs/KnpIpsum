@@ -5,7 +5,7 @@
 {% block content %}
     <p>Follow these examples and look at the code behind it: we have tried to make it self-explanatory.</p>
     <ul id="ipsum-list">
-        <li><a href="{{ url('_ipsum_hello', {'name': 'World'}) }}">Template</a> &rarr; How to use a twig</li>
+        <li><a href="{{ url('_ipsum_twig', {'name': 'World'}) }}">Template</a> &rarr; How to use a twig</li>
         <li><a href="{{ url('_ipsum_form') }}">Forms</a> &rarr; How to use a form like a contact form</li>
         <li><a href="{{ url('_ipsum_doctrine_orm') }}">Doctrine ORM</a> &rarr; How to work with your relational database</a></li>
         <li><a href="{{ url('_ipsum_secured') }}">Security</a> &rarr; How to secure an action and create a login page</li>
@@ -19,6 +19,5 @@
         <li><a href="{{ url('_ipsum_fos_rest') }}">FOSRestBundle</a> &rarr; How to support different output format easily</a></li>
         <li><a href="{{ url('_ipsum_pagerfanta') }}">Pagerfanta</a> &rarr; How to use Pagerfanta to paginate your results</a></li>
         <li><a href="{{ url('admin_knp_ipsum_timedthing_list') }}">SonataAdminBundle</a> &rarr; How to use SonataAdminBundle to create an admin interface</a></li>
-        <li><a href="{{ url('fos_user_profile_show') }}">FOSUserBundle</a> &rarr; How to use FOSUserBundle to manage the users</a></li>
     </ul>
 {% endblock %}

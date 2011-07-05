@@ -4,12 +4,12 @@ _imagine:
 
 _admin:
     resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
-    prefix: /ipsum/admin
+    prefix: /admin
 
 _sonata_admin:
     resource: .
-    type: sonata_admin
-    prefix: /ipsum/admin
+    type:     sonata_admin
+    prefix:   /admin
 
 _ipsum:
     resource: "@KnpIpsumBundle/Resources/config/routing.yml"

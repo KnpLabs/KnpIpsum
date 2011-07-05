@@ -7,11 +7,11 @@ Feature: Doctrine ORM
     Given there is no things in database
 
   Scenario: There is a "Doctrine ORM" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     Then I should see "Doctrine ORM"
 
   Scenario: User clicks "Doctrine ORM" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "Doctrine ORM"
     Then I should see "List of things"
     And should see "List all \"things\" in your database"
@@ -19,18 +19,18 @@ Feature: Doctrine ORM
     And should see "Use a custom repository class with custom query methods"
 
   Scenario: User sees empty list by default
-    Given I am on "/ipsum/doctrine-orm"
+    Given I am on "/doctrine-orm"
     When I follow "List all \"things\" in your database"
     Then I should see "There are no things yet!"
 
   Scenario: User creates a new "thing" entry
-    Given I am on "/ipsum/doctrine-orm"
+    Given I am on "/doctrine-orm"
     When I follow "Create a new \"thing\" entry in your database"
     Then I should see "You have created a new Thing called \"Lorem"
     And I should see "in a new category called \"Category"
 
   Scenario: User uses custom query
-    Given I am on "/ipsum/doctrine-orm"
+    Given I am on "/doctrine-orm"
     When I follow "Create a new \"thing\" entry in your database"
     And follow "Use a custom repository class with custom query methods"
     And I fill in "I want the things whose name contains:" with "Lorem"

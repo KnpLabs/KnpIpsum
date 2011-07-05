@@ -1,13 +1,13 @@
 _ipsum_gedmo_extensions:
-    pattern:  /ipsum/gedmo-extensions
+    pattern:  /gedmo-extensions
     defaults: { _controller: KnpIpsumBundle:GedmoExtensions:index }
 
 _ipsum_gedmo_extensions_create:
-    pattern:  /ipsum/gedmo-extensions/create
+    pattern:  /gedmo-extensions/create
     defaults: { _controller: KnpIpsumBundle:GedmoExtensions:create }
 
 _ipsum_gedmo_extensions_update:
-    pattern:  /ipsum/gedmo-extensions/update/{id}
+    pattern:  /gedmo-extensions/update/{id}
     defaults: { _controller: KnpIpsumBundle:GedmoExtensions:update }
     requirements:
         id: ^\d+$

@@ -4,14 +4,14 @@ Feature: Twig templates
   I need to be able to use Twig
 
   Scenario: There is a "Template" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     Then I should see "Template"
 
   Scenario: User clicks "Template" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "Template"
     Then I should see "Hello World, how are you today"
 
-  Scenario: User loads /ipsum/twig/Edgar page
-    When I go to "/ipsum/twig/Edgar"
+  Scenario: User loads /twig/Edgar page
+    When I go to "/twig/Edgar"
     Then I should see "Hello Edgar, how are you today"

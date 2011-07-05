@@ -20,36 +20,36 @@ security:
             security: false
 
         login:
-            pattern:  ^/ipsum/secured/login$
+            pattern:  ^/secured/login$
             security: false
 
         secured_area:
-            pattern:    ^/ipsum/secured/
+            pattern:    ^/secured/
             provider:   in_memory
             form_login:
-                check_path: /ipsum/secured/login_check
-                login_path: /ipsum/secured/login
+                check_path: /secured/login_check
+                login_path: /secured/login
             logout:
-                path:   /ipsum/secured/logout
-                target: /ipsum
+                path:   /secured/logout
+                target: /
             #anonymous: ~
             #http_basic:
             #    realm: "Secured Ipsum Area"
 
         fos_user:
-            pattern:    ^/ipsum/fos-user/
+            pattern:    ^/fos-user/
             provider:   fos_user
             form_login:
-                check_path: /ipsum/fos-user/login_check
-                login_path: /ipsum/fos-user/login
+                check_path: /fos-user/login_check
+                login_path: /fos-user/login
             logout:
-                path:   /ipsum/fos-user/logout
-                target: /ipsum
+                path:   /fos-user/logout
+                target: /
             anonymous: ~
 
     access_control:
-        - { path: /ipsum/secured/admin, roles: ROLE_ADMIN }
-        - { path: ^/ipsum/fos-user/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/ipsum/fos-user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/ipsum/fos-user$, roles: Is_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/ipsum/fos-user/, roles: ROLE_USER }
+        - { path: /secured/admin, roles: ROLE_ADMIN }
+        - { path: ^/fos-user/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/fos-user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/fos-user$, roles: Is_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/fos-user/, roles: ROLE_USER }

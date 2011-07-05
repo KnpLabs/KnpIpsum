@@ -1,17 +1,17 @@
 _ipsum_doctrine_orm:
-    pattern:  /ipsum/doctrine-orm
+    pattern:  /doctrine-orm
     defaults: { _controller: KnpIpsumBundle:DoctrineOrm:index }
 
 _ipsum_doctrine_orm_create:
-    pattern:  /ipsum/doctrine-orm/create
+    pattern:  /doctrine-orm/create
     defaults: { _controller: KnpIpsumBundle:DoctrineOrm:create }
 
 _ipsum_doctrine_orm_customrepository:
-    pattern:  /ipsum/doctrine-orm/custom-repository
+    pattern:  /doctrine-orm/custom-repository
     defaults: { _controller: KnpIpsumBundle:DoctrineOrm:customRepository }
 
 _ipsum_doctrine_orm_delete:
-    pattern:  /ipsum/doctrine-orm/delete/{id}
+    pattern:  /doctrine-orm/delete/{id}
     defaults: { _controller: KnpIpsumBundle:DoctrineOrm:delete }
     requirements:
         id: ^\d+$

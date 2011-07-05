@@ -4,19 +4,19 @@ Feature: Security
   I need to be able to use security component
 
   Background:
-    Given I go to "/ipsum/secured/logout"
+    Given I go to "/secured/logout"
 
   Scenario: There is a "Security" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     Then I should see "Security"
 
   Scenario: User clicks "Security" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "Security"
     Then I should see "Simple page only for authenticated users"
 
   Scenario Outline: User logins
-    Given I am on "/ipsum/secured"
+    Given I am on "/secured"
     When I follow "Secured page for admins only"
     And I fill in "Username" with "<username>"
     And fill in "Password" with "<password>"

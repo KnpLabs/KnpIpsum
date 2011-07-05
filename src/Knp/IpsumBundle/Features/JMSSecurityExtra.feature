@@ -4,19 +4,19 @@ Feature: JMS SecurityExtra
   I need to be able to use security component with annotations
 
   Background:
-    Given I go to "/ipsum/secured/logout"
+    Given I go to "/secured/logout"
 
   Scenario: There is a "JMSSecurityExtraBundle" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     Then I should see "JMSSecurityExtraBundle"
 
   Scenario: User clicks "JMSSecurityExtraBundle" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "JMSSecurityExtraBundle"
     Then I should see "Login"
 
   Scenario Outline: User logins
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "JMSSecurityExtraBundle"
     And I fill in "Username" with "<username>"
     And fill in "Password" with "<password>"

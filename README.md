@@ -78,8 +78,8 @@ it will look for a SMTP server on localhost without authentication.
 Test it
 -------
 
-The main page of the application is configured at `/ipsum`. Access it via
-`web/app_dev.php/ipsum`.
+The main page of the application is configured at `/`. Access it via
+`web/app_dev.php/`.
 
 Reporting an issue
 ------------------

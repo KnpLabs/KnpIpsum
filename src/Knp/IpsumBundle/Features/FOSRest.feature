@@ -7,23 +7,23 @@ Feature: FOS Rest
     Given there are 3 timed things in database
 
   Scenario: There is a "FOSRestBundle" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     Then I should see "FOSRestBundle"
 
   Scenario: User clicks "FOSRestBundle" link on home page
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "FOSRestBundle"
     Then I should see "Simple page using FOSRestBundle"
 
   Scenario: User sees 3 things in html format
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "FOSRestBundle"
     Then I should see "Lorem #0"
     And should see "Lorem #1"
     And should see "Lorem #2"
 
   Scenario: User sees 3 things in json format
-    Given I am on "/ipsum"
+    Given I am on "/"
     When I follow "FOSRestBundle"
     And follow "JSON"
     Then the response should contain "\"name\":\"Lorem #0\""

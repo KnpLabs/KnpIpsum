@@ -10,7 +10,7 @@ class IpsumControllerTest extends WebTestCase
     {
         $client = self::createClient();
 
-        $crawler = $client->request('GET', '/ipsum/twig/Edgar');
+        $crawler = $client->request('GET', '/twig/Edgar');
 
         $this->assertTrue($crawler->filter('html:contains("Hello Edgar")')->count() > 0);
     }

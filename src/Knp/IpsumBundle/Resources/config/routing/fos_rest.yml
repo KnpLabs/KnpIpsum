@@ -1,4 +1,4 @@
 _ipsum_fos_rest:
-    pattern:  /ipsum/fos-rest.{_format}
+    pattern:  /fos-rest.{_format}
     defaults: { _controller: KnpIpsumBundle:FOSRest:index, _format: html }
     requirements: { _format: html|json }

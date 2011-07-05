@@ -1,13 +1,9 @@
-_welcome:
-    pattern:  /
-    defaults: { _controller: KnpIpsumBundle:Summary:temporaryRedirect }
-
 _ipsum:
-    pattern:  /ipsum
+    pattern:  /
     defaults: { _controller: KnpIpsumBundle:Summary:index }
 
-_ipsum_hello:
-    pattern:  /ipsum/twig/{name}
+_ipsum_twig:
+    pattern:  /twig/{name}
     defaults: { _controller: KnpIpsumBundle:Twig:hello }
 
 _ipsum_form:
