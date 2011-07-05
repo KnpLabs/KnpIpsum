@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\BluePrintBundle\SonataBluePrintBundle(),

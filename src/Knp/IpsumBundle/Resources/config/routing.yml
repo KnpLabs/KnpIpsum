@@ -44,5 +44,8 @@ _ipsum_gedmo_extensions:
 _ipsum_fos_rest:
     resource: "@KnpIpsumBundle/Resources/config/routing/fos_rest.yml"
 
+_ipsum_fos_user:
+    resource: "@KnpIpsumBundle/Resources/config/routing/fos_user.yml"
+
 _ipsum_pagerfanta:
     resource: "@KnpIpsumBundle/Resources/config/routing/pagerfanta.yml"

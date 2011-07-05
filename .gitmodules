@@ -121,3 +121,6 @@
 [submodule "vendor/bundles/Sonata/jQueryBundle"]
 	path = vendor/bundles/Sonata/jQueryBundle
 	url = http://github.com/sonata-project/SonatajQueryBundle.git
+[submodule "vendor/bundles/FOS/UserBundle"]
+	path = vendor/bundles/FOS/UserBundle
+	url = http://github.com/FriendsOfSymfony/FOSUserBundle.git

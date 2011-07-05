@@ -11,6 +11,8 @@ security:
             users:
                 user:  { password: userpass, roles: [ 'ROLE_USER' ] }
                 admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+        fos_user:
+            id: fos_user.user_manager
 
     firewalls:
         dev:
@@ -23,6 +25,7 @@ security:
 
         secured_area:
             pattern:    ^/ipsum/secured/
+            provider:   in_memory
             form_login:
                 check_path: /ipsum/secured/login_check
                 login_path: /ipsum/secured/login
@@ -33,5 +36,20 @@ security:
             #http_basic:
             #    realm: "Secured Ipsum Area"
 
+        fos_user:
+            pattern:    ^/ipsum/fos-user/
+            provider:   fos_user
+            form_login:
+                check_path: /ipsum/fos-user/login_check
+                login_path: /ipsum/fos-user/login
+            logout:
+                path:   /ipsum/fos-user/logout
+                target: /ipsum
+            anonymous: ~
+
     access_control:
         - { path: /ipsum/secured/admin, roles: ROLE_ADMIN }
+        - { path: ^/ipsum/fos-user/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ipsum/fos-user/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ipsum/fos-user$, roles: Is_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ipsum/fos-user/, roles: ROLE_USER }
