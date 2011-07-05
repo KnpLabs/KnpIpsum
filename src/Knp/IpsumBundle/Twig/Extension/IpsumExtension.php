@@ -46,8 +46,21 @@ class IpsumExtension extends \Twig_Extension
         // remove the code block
         $template = str_replace('{% set code = code(_self) %}', '', $template);
         $template = $this->cleanCode($template);
-        
+
+        $featureName = preg_replace('/^.*Controller\/([^\/]+)Controller\.php\:\d+$/', '$1', $controllerPath);
+        $featurePath = __DIR__ . '/../../Features/'.$featureName.'.feature';
+        if (file_exists($featurePath)) {
+            $feature = file_get_contents($featurePath);
+            $featureContent = <<<FEATURE
+<h3>User Story</h3>
+<pre class="code_block"><code>$feature</code></pre>
+FEATURE;
+        } else {
+            $featureContent = '';
+        }
+
         return <<<EOF
+$featureContent
 <h3>Controller Code</h3>
 <span class="code_path">$controllerPath</span>
 <pre class="code_block"><code>$controller</code></pre>
