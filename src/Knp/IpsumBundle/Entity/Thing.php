@@ -87,4 +87,9 @@ class Thing
     {
         return $this->category;
     }
+
+    public function __toString()
+    {
+        return $this->identifyYourselfPlease();
+    }
 }
