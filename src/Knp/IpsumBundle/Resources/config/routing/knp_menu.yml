@@ -1,3 +1,3 @@
-_ipsum_knp_menu:
+knp_ipsum_knp_menu:
     pattern:  /knplabs-menu/{name}
     defaults: { _controller: KnpIpsumBundle:KnpMenu:index, name: "Knp" }

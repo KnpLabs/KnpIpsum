@@ -1,4 +1,4 @@
-_ipsum_login:
+knp_ipsum_login:
     pattern:  /secured/login
     defaults: { _controller: KnpIpsumBundle:Secured:login }
     
@@ -6,14 +6,14 @@ _security_check:
     pattern:  /secured/login_check
     defaults: { _controller: KnpIpsumBundle:Secured:securityCheck }
     
-_ipsum_logout:
+knp_ipsum_logout:
     pattern:  /secured/logout
     defaults: { _controller: KnpIpsumBundle:Secured:logout }
     
-_ipsum_secured:
+knp_ipsum_secured:
     pattern:  /secured
     defaults: { _controller: KnpIpsumBundle:Secured:index }
 
-_ipsum_secured_admin:
+knp_ipsum_secured_admin:
     pattern:  /secured/admin
     defaults: { _controller: KnpIpsumBundle:Secured:admin }

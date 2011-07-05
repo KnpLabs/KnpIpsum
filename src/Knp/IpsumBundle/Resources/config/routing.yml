@@ -1,47 +1,47 @@
-_ipsum:
+knp_ipsum:
     pattern:  /
     defaults: { _controller: KnpIpsumBundle:Summary:index }
 
-_ipsum_twig:
+knp_ipsum_twig:
     pattern:  /twig/{name}
     defaults: { _controller: KnpIpsumBundle:Twig:hello }
 
-_ipsum_form:
+knp_ipsum_form:
     resource: "@KnpIpsumBundle/Resources/config/routing/form.yml"
 
-_ipsum_secured:
+knp_ipsum_secured:
     resource: "@KnpIpsumBundle/Resources/config/routing/secured.yml"
 
-_ipsum_sensio_frameworkextra:
+knp_ipsum_sensio_frameworkextra:
     resource: "@KnpIpsumBundle/Controller/SensioFrameworkExtraController.php"
     type:     annotation
 
-_ipsum_jms_securityextra:
+knp_ipsum_jms_securityextra:
     resource: "@KnpIpsumBundle/Resources/config/routing/jms_securityextra.yml"
 
-_ipsum_knp_menu:
+knp_ipsum_knp_menu:
     resource: "@KnpIpsumBundle/Resources/config/routing/knp_menu.yml"
 
-_ipsum_avalanche_imagine:
+knp_ipsum_avalanche_imagine:
     resource: "@KnpIpsumBundle/Resources/config/routing/avalanche_imagine.yml"
 
-_ipsum_doctrine_orm:
+knp_ipsum_doctrine_orm:
     resource: "@KnpIpsumBundle/Resources/config/routing/doctrine_orm.yml"
 
-_ipsum_assetic:
+knp_ipsum_assetic:
     resource: "@KnpIpsumBundle/Resources/config/routing/assetic.yml"
 
-_ipsum_swiftmailer:
+knp_ipsum_swiftmailer:
     resource: "@KnpIpsumBundle/Resources/config/routing/swiftmailer.yml"
 
-_ipsum_gedmo_extensions:
+knp_ipsum_gedmo_extensions:
     resource: "@KnpIpsumBundle/Resources/config/routing/gedmo_extensions.yml"
 
-_ipsum_fos_rest:
+knp_ipsum_fos_rest:
     resource: "@KnpIpsumBundle/Resources/config/routing/fos_rest.yml"
 
-_ipsum_fos_user:
+knp_ipsum_fos_user:
     resource: "@KnpIpsumBundle/Resources/config/routing/fos_user.yml"
 
-_ipsum_pagerfanta:
+knp_ipsum_pagerfanta:
     resource: "@KnpIpsumBundle/Resources/config/routing/pagerfanta.yml"

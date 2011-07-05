@@ -24,7 +24,7 @@ class FormController extends Controller
 
                 $this->get('session')->setFlash('notice', $ret);
 
-                return new RedirectResponse($this->generateUrl('_ipsum'));
+                return new RedirectResponse($this->generateUrl('knp_ipsum'));
             }
         }
 

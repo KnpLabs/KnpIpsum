@@ -11,7 +11,7 @@
             <li>
                 * {{ thing.name }}
                 − created at {{ thing.createdAt|date }} and updated at {{ thing.updatedAt|date }}
-                − <a href="{{ path('_ipsum_gedmo_extensions_update', {'id': thing.id}) }}">UPDATE</a>
+                − <a href="{{ path('knp_ipsum_gedmo_extensions_update', {'id': thing.id}) }}">UPDATE</a>
             </li>
         {% endfor %}
         </ul>

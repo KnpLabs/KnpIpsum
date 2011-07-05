@@ -11,5 +11,5 @@ _sonata_admin:
     type:     sonata_admin
     prefix:   /admin
 
-_ipsum:
+knp_ipsum:
     resource: "@KnpIpsumBundle/Resources/config/routing.yml"

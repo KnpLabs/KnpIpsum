@@ -5,5 +5,5 @@
 {% block security %}
     logged in as <strong>{{ app.user ? app.user.username : 'Anonymous' }}</strong>
     <br/>
-    <a href="{{ path('_ipsum_logout') }}">Logout</a>
+    <a href="{{ path('knp_ipsum_logout') }}">Logout</a>
 {% endblock %}

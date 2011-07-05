@@ -1,7 +1,7 @@
-_ipsum_jms_securityextra:
+knp_ipsum_jms_securityextra:
     pattern:  /secured/jms-securityextra
     defaults: { _controller: KnpIpsumBundle:JMSSecurityExtra:index }
 
-_ipsum_jms_securityextra_admin:
+knp_ipsum_jms_securityextra_admin:
     pattern:  /secured/jms-securityextra/admin
     defaults: { _controller: KnpIpsumBundle:JMSSecurityExtra:admin }

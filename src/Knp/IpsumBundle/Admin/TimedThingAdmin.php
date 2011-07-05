@@ -30,7 +30,7 @@ class TimedThingAdmin extends Admin
     public function getBreadcrumbs($action)
     {
         $menu = new Menu();
-        $item = $menu->addChild('Home', $this->getRouter()->generate('_ipsum'));
+        $item = $menu->addChild('Home', $this->getRouter()->generate('knp_ipsum'));
 
         return $this->buildBreadcrumbs($action, $item);
     }

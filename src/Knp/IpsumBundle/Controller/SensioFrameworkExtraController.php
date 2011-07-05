@@ -12,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class SensioFrameworkExtraController extends Controller
 {
     /**
-     * @Route("/", name="_ipsum_sensio_frameworkextra")
+     * @Route("/", name="knp_ipsum_sensio_frameworkextra")
      * @Template()
      */
     public function indexAction()
@@ -21,7 +21,7 @@ class SensioFrameworkExtraController extends Controller
     }
 
     /**
-     * @Route("/hello/{name}", name="_ipsum_sensio_frameworkextra_hello")
+     * @Route("/hello/{name}", name="knp_ipsum_sensio_frameworkextra_hello")
      * @Template()
      */
     public function helloAction($name)
