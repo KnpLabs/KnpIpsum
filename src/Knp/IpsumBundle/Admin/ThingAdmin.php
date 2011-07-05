@@ -23,7 +23,7 @@ class ThingAdmin extends Admin
     public function getBreadcrumbs($action)
     {
         $menu = new Menu();
-        $item = $menu->addChild('Home', $this->getRouter()->generate('_ipsum'));
+        $item = $menu->addChild('Home', $this->getRouter()->generate('_ipsum'))->addChild('Dashboard', $this->getRouter()->generate('sonata_admin_dashboard'));
 
         return $this->buildBreadcrumbs($action, $item);
     }
