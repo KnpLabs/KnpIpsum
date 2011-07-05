@@ -83,3 +83,8 @@ fos_rest:
     normalizers:
         - knp_ipsum.normalizer.datetime
         - fos_rest.get_set_method_normalizer
+
+fos_user:
+    db_driver: orm
+    firewall_name: fos_user
+    user_class: Knp\IpsumBundle\Entity\User
