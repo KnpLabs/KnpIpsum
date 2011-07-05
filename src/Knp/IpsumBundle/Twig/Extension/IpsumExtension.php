@@ -50,7 +50,7 @@ class IpsumExtension extends \Twig_Extension
         $featureName = preg_replace('/^.*Controller\/([^\/]+)Controller\.php\:\d+$/', '$1', $controllerPath);
         $featurePath = realpath(__DIR__ . '/../../Features/'.$featureName.'.feature');
         if (file_exists($featurePath)) {
-            $feature = file_get_contents($featurePath);
+            $feature = htmlspecialchars(file_get_contents($featurePath), ENT_QUOTES, 'UTF-8');
             $featurePath = preg_replace('/^.*(src\/Knp\/IpsumBundle\/Features)/', '$1', $featurePath);
             $featureContent = <<<FEATURE
 <h3>User Story</h3>
