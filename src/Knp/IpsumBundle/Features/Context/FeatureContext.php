@@ -10,28 +10,26 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
-//
-// Require 3rd-party libraries here:
-//
-//   require_once 'PHPUnit/Autoload.php';
-//   require_once 'PHPUnit/Framework/Assert/Functions.php';
-//
+require_once 'PHPUnit/Autoload.php';
+require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 /**
  * Feature context.
  */
-class FeatureContext extends MinkContext //BehatContext if you want to test application itself, not web
+class FeatureContext extends MinkContext
 {
-//
-// Place your definition and hook methods here:
-//
-//    /**
-//     * @Given /^I have done something with "([^"]*)"$/
-//     */
-//    public function iHaveDoneSomethingWith($argument)
-//    {
-//        $contianer = $this->getContainer();
-//        $container->get('some_service')->doSomethingWith($argument);
-//    }
-//
+    /**
+     * @Given /^there is no things in database$/
+     */
+    public function thereIsNoThingsInDatabase()
+    {
+        $this->getEntityManager()
+            ->createQuery('DELETE KnpIpsumBundle:Thing')
+            ->execute();
+    }
+
+    protected function getEntityManager()
+    {
+        return $this->getContainer()->get('doctrine')->getEntityManager();
+    }
 }
