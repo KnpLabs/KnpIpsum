@@ -20,14 +20,14 @@ class DoctrineOrmController extends Controller
 
     public function customRepositoryAction()
     {
-        $finish = $this->get('request')->query->get('q', '');
+        $text = $this->get('request')->query->get('q', '');
 
         $em = $this->get('doctrine')->getEntityManager();
-        $things = $em->getRepository('KnpIpsumBundle:Thing')->findAllWhoseNameFinishWith($finish);
+        $things = $em->getRepository('KnpIpsumBundle:Thing')->findAllWhoseNameContains($text);
 
         return $this->render('KnpIpsumBundle:DoctrineOrm:custom_repository.html.twig', array(
             'things' => $things,
-            'finish' => $finish,
+            'text'   => $text,
         ));
     }
 

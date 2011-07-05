@@ -1,11 +1,11 @@
 {% extends "KnpIpsumBundle:DoctrineOrm:layout.html.twig" %}
 
 {% block content_doctrine %}
-    <h1>Things finishing with the string "{{ finish }}"</h1>
+    <h1>Things containing the string "{{ text }}"</h1>
 
     <form action="" method="get" accept-charset="utf-8">
-        <label for="query">I want the things whose name finish with: </label>
-        <input type="text" name="q" value="{{ finish }}" id="q">
+        <label for="q">I want the things whose name contains:</label>
+        <input type="text" id="q" name="q" value="{{ text }}" id="q">
         <p><input type="submit" value="Search"></p>
     </form>
 

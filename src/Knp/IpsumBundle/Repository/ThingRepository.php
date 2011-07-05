@@ -7,14 +7,14 @@ use Doctrine\ORM\EntityRepository;
 class ThingRepository extends EntityRepository
 {
     /**
-     * Return all things whose name finish with some string
+     * Return all things whose name contains some string
      * Order by id desc
      * I know, this is heavy stuff.
      *
      * @param string $finish
      * @return Thing[]
      */
-    public function findAllWhoseNameFinishWith($finish)
+    public function findAllWhoseNameContains($text)
     {
         // Note that we use a JOIN to avoid doing multiple requests
         // Your database will be proud of you
@@ -25,7 +25,7 @@ class ThingRepository extends EntityRepository
             ->orderBy('thing.id', 'desc')
             ->getQuery()
             ->setParameters(array(
-                'param' => '%'.$finish,
+                'param' => '%'.$text.'%',
             ));
 
         return $q->execute();
