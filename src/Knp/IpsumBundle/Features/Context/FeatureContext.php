@@ -10,6 +10,8 @@ use Behat\Behat\Context\ClosuredContextInterface,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 
+use Knp\IpsumBundle\Entity\TimedThing;
+
 require_once 'PHPUnit/Autoload.php';
 require_once 'PHPUnit/Framework/Assert/Functions.php';
 
@@ -24,8 +26,27 @@ class FeatureContext extends MinkContext
     public function thereIsNoThingsInDatabase()
     {
         $this->getEntityManager()
-            ->createQuery('DELETE KnpIpsumBundle:Thing')
+            ->createQuery('DELETE KnpIpsumBundle:TimedThing')
             ->execute();
+    }
+
+    /**
+     * @Given /^there are (\d+) timed things in database$/
+     */
+    public function thereAreTimedThingsInDatabase($count)
+    {
+        $em = $this->getEntityManager();
+
+        $em->createQuery('DELETE KnpIpsumBundle:TimedThing')
+           ->execute();
+
+        for ($i = 0; $i < intval($count); $i++) {
+            $thing = new TimedThing();
+            $thing->setName('Lorem #'.$i);
+            $thing->setContent('text #'.$i);
+            $em->persist($thing);
+        }
+        $em->flush();
     }
 
     protected function getEntityManager()
