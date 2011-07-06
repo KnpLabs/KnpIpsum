@@ -49,9 +49,11 @@ span.code_path { display: block; background: #ccc; padding: 5px; width: 918px; f
 #by-knplabs { float: right; margin-top: 20px; }
 #ipsum-security { float: right; margin-top: 20px; clear: both; text-align: right; }
 #ipsum-wrapper { width: 970px; margin: 0 auto; }
-.content-margin { padding-top: 20px; }
 .ipsum-content { background-color: white; border: 1px solid #DFDFDF; padding: 0 20px 20px 20px; margin-bottom: 20px; -moz-border-radius: 16px; -webkit-border-radius: 16px; border-radius: 16px; word-wrap: break-word; }
+.content-margin { padding-top: 20px; }
 .ipsum-content h1 { font-size: 26px; }
+.ipsum-code-behind h1 { font-size: 18px; padding: 20px 0 10px 0; }
+
 input[type=text], input[type=password] { border: 1px solid #DADADA; background: white url(../images/field-background.gif) repeat-x left top; padding: 5px 6px; color: #565656; font-family: 'Lucida Sans Unicode', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
 .ipsum-button-grey,
 .ipsum-button-green { font-size: 0.85em; font-weight: bold; cursor: pointer; display: inline-block; outline: none; text-align: center; text-transform: uppercase; padding: 3px 10px; text-shadow: 0 1px 1px rgba(0,0,0,.3); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }

@@ -38,14 +38,14 @@
                 </div>
             {% endif %}
 
-            <div class="ipsum-content">
+            <section class="ipsum-content">
                 {% block content %}
                 {% endblock %}
-            </div>
+            </section>
 
             {% if code is defined %}
                 <h2>Code behind this page</h2>
-                <div class="ipsum-content">{{ code|raw }}</div>
+                <section class="ipsum-content ipsum-code-behind">{{ code|raw }}</section>
             {% endif %}
         </div>
 

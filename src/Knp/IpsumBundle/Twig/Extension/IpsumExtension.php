@@ -53,7 +53,7 @@ class IpsumExtension extends \Twig_Extension
             $feature = htmlspecialchars(file_get_contents($featurePath), ENT_QUOTES, 'UTF-8');
             $featurePath = preg_replace('/^.*(src\/Knp\/IpsumBundle\/Features)/', '$1', $featurePath);
             $featureContent = <<<FEATURE
-<h3>User Story</h3>
+<h1>User Story</h1>
 <span class="code_path">$featurePath</span>
 <pre class="code_block"><code>$feature</code></pre>
 FEATURE;
@@ -63,11 +63,11 @@ FEATURE;
 
         return <<<EOF
 $featureContent
-<h3>Controller Code</h3>
+<h1>Controller Code</h1>
 <span class="code_path">$controllerPath</span>
 <pre class="code_block"><code>$controller</code></pre>
 
-<h3>Template Code</h3>
+<h1>Template Code</h1>
 <span class="code_path">$templatePath</span>
 <pre class="code_block"><code>$template</code></pre>
 EOF;
