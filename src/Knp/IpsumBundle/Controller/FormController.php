@@ -12,7 +12,7 @@ class FormController extends Controller
     public function contactAction()
     {
         $contact = new Contact();
-        $form = $this->get('form.factory')->create(new ContactType(), $contact);
+        $form = $this->createForm(new ContactType(), $contact);
 
         $request = $this->container->get('request');
 
