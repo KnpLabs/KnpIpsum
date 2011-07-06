@@ -5,27 +5,20 @@ namespace Knp\IpsumBundle\Admin;
 use Sonata\AdminBundle\Admin\Admin;
 use Knp\Bundle\MenuBundle\Menu;
 
-class TimedThingAdmin extends Admin
+class ThingAdmin extends Admin
 {
     protected $list = array(
         'name' => array('identifier' => true),
-        'content',
-        '_action' => array('actions' => array('view' => array(), 'edit' => array(), 'delete' => array())),
-    );
-
-    protected $view = array(
-        'name' => array('identifier' => true),
-        'content',
-        'createdAt',
-        'updatedAt',
+        'category',
+        '_action' => array('actions' => array('edit' => array(), 'delete' => array())),
     );
 
     protected $form = array(
         'name',
-        'content',
+        'category',
     );
 
-    protected $baseRoutePattern = '/timed-things';
+    protected $baseRoutePattern = '/things';
 
     public function getBreadcrumbs($action)
     {

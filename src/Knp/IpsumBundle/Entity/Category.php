@@ -3,6 +3,7 @@
 namespace Knp\IpsumBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -25,6 +26,11 @@ class Category
      * @ORM\OneToMany(targetEntity="Knp\IpsumBundle\Entity\Thing", mappedBy="category")
      */
      protected $things;
+
+     public function __construct()
+     {
+         $this->things = new ArrayCollection();
+     }
 
     /**
      * Get id
@@ -52,6 +58,11 @@ class Category
      * @return string
      */
     public function getName()
+    {
+        return $this->name;
+    }
+
+    public function __toString()
     {
         return $this->name;
     }

@@ -1,5 +1,15 @@
-timedthing: Timed things
+timed_thing: Timed things
 link_timedthing_list: Timed things list
 link_timedthing_create: Create a timed thing
 link_timedthing_edit: Edit a timed thing
 link_timedthing_view: Display a timed thing
+thing: Things
+link_thing_list: Things list
+link_thing_create: Create a thing
+link_thing_edit: Edit a thing
+link_thing_view: Display a thing
+category: Categories
+link_category_list: Categories list
+link_category_create: Create a category
+link_category_edit: Edit a category
+link_category_view: Display a category
