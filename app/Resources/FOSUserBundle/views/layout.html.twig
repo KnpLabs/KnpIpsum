@@ -1,18 +1,19 @@
 {% extends 'KnpIpsumBundle::layout.html.twig' %}
 
-{% block title "FOSUserBundle" %}
+{% block title "FOSUserBundle Tutorial" %}
 
 {% block content %}
-    <div style="margin-bottom: 10px;">
-        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-            <a href="{{ path('fos_user_security_logout') }}">
-                {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-            </a>
-        {% else %}
-            <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-        {% endif %}
+    <div class="content-margin">
+        {% block fos_user_content %}{% endblock %}
     </div>
+
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <h1>You're logged in!</h1>
+        {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+        <a href="{{ path('fos_user_security_logout') }}">
+            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+        </a>
+    {% endif %}
 
     {% for key, flash in app.session.getFlashes() %}
     <div class="{{ flash }}" style="margin-bottom: 5px;">
@@ -20,11 +21,7 @@
     </div>
     {% endfor %}
 
-    <div>
-        {% block fos_user_content %}{% endblock %}
-    </div>
-
-    <h1 style="margin-top: 40px">What can I do with FOSUserBundle?</h1>
+    <h1>What can I do with FOSUserBundle?</h1>
     <ul>
         <li><a href="{{ path('fos_user_registration_register') }}">Create a new account</a></li>
         <li><a href="{{ path('fos_user_profile_show') }}">See your profile</a></li>

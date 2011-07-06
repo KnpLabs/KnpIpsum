@@ -30,9 +30,10 @@ a:hover { }
 strong { font-weight: bold; }
 em { font-style: italic; }
 h1, h2, h3 { font-family: Georgia, "Times New Roman", Times, serif; color: #C33620; }
-h1 { font-size: 38px; padding-bottom: 20px; }
-h1.content-title { margin-top: 20px; }
-h2 { font-size: 22px; font-weight: bold; margin-bottom: 10px; }
+h1 { font-size: 38px; padding: 20px 0; }
+h1.first { padding-top: 0; }
+h1.content-title { margin: 20px 0; padding: 0;}
+h2 { font-size: 22px; font-weight: normal; margin: 10px 0; }
 h3 { font-size: 16px; font-weight: bold; margin-top: 10px; margin-bottom: 10px; }
 p { line-height: 20px; padding-bottom: 10px; padding-top: 10px; }
 ul#ipsum-list a { font-weight: strong; }
@@ -48,7 +49,8 @@ span.code_path { display: block; background: #ccc; padding: 5px; width: 918px; f
 #by-knplabs { float: right; margin-top: 20px; }
 #ipsum-security { float: right; margin-top: 20px; clear: both; text-align: right; }
 #ipsum-wrapper { width: 970px; margin: 0 auto; }
-.ipsum-content { background-color: white; border: 1px solid #DFDFDF; padding: 30px 20px; margin-bottom: 20px; -moz-border-radius: 16px; -webkit-border-radius: 16px; border-radius: 16px; word-wrap: break-word; }
+.content-margin { padding-top: 20px; }
+.ipsum-content { background-color: white; border: 1px solid #DFDFDF; padding: 0 20px 20px 20px; margin-bottom: 20px; -moz-border-radius: 16px; -webkit-border-radius: 16px; border-radius: 16px; word-wrap: break-word; }
 .ipsum-content h1 { font-size: 26px; }
 input[type=text], input[type=password] { border: 1px solid #DADADA; background: white url(../images/field-background.gif) repeat-x left top; padding: 5px 6px; color: #565656; font-family: 'Lucida Sans Unicode', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
 .ipsum-button-grey,
