@@ -4,8 +4,8 @@
 
 {% block content %}
     <h1>A sample contact form</h1>
-    
-    <form action="" method="POST">
+
+    <form action="" method="POST" {{ form_enctype(form) }}>
         {{ form_errors(form) }}
 
         {{ form_rest(form) }}
