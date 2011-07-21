@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Knp\IpsumBundle\Form\Type\ContactType;
 use Knp\IpsumBundle\Form\Model\Contact;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class FormController extends Controller
 {
@@ -20,6 +21,11 @@ class FormController extends Controller
             $form->bindRequest($request);
 
             if ($form->isValid()) {
+                $file = $form['attachment']->getData();
+                if ($file) {
+                    $file->move($contact->getUploadDir(), $contact->generateRandomFileName($file));
+                }
+
                 $ret = $contact->dummySend();
 
                 $this->get('session')->setFlash('notice', $ret);
