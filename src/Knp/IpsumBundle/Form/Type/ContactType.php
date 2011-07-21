@@ -11,6 +11,7 @@ class ContactType extends AbstractType
     {
         $builder->add('email', 'text', array('required' => true, 'label' => 'Your email:'));
         $builder->add('message', 'textarea', array('required' => true, 'label' => 'Your delightful message:'));
+        $builder->add('attachment', 'file', array('required' => false, 'label' => 'Your attachment:'));
     }
 
     public function getDefaultOptions(array $options)
