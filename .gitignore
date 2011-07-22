@@ -4,3 +4,4 @@ app/cache/*
 app/logs/*
 build/
 app/config/config_*_local.yml
+.idea/*

@@ -1,0 +1,14 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "Doctrine ODM Tutorial with MongoDB" %}
+
+{% block content %}
+    {% block content_doctrine %}
+    {% endblock %}
+
+    <h1 style="margin-top: 40px">What can I do with Doctrine + MongoDB?</h1>
+    <ul>
+        <li><a href="{{ path('knp_ipsum_doctrine_odm') }}">List all "things" in your database</a></li>
+        <li><a href="{{ path('knp_ipsum_doctrine_odm_create') }}">Create a new "thing" entry in your database</a></li>
+    </ul>
+{% endblock %}

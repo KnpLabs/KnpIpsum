@@ -1,0 +1,21 @@
+{% extends "KnpIpsumBundle:DoctrineOdm:layout.html.twig" %}
+
+{% block content_doctrine %}
+    <h1>List of things</h1>
+
+    <p>Here is the list of things from your database:</p>
+
+    {% if things %}
+        <ul>
+        {% for thing in things %}
+            <li>* {{ thing.identifyYourselfPlease }} − <a href="{{ path('knp_ipsum_doctrine_odm_delete', {'id': thing.id}) }}">DELETE</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>− There are no things yet!</p>
+    {% endif %}
+
+    <p>You should have a look at <pre>src/Knp/IpsumBundle/Document/Thing.php</pre></p>
+{% endblock %}
+
+{% set code = code(_self) %}

@@ -1,0 +1,13 @@
+knp_ipsum_doctrine_odm:
+    pattern: /doctrine-odm
+    defaults: { _controller: KnpIpsumBundle:DoctrineOdm:index }
+
+knp_ipsum_doctrine_odm_create:
+    pattern: /doctrine-odm/create
+    defaults: { _controller: KnpIpsumBundle:DoctrineOdm:create }
+
+knp_ipsum_doctrine_odm_delete:
+    pattern: /doctrine-odm/delete/{id}
+    defaults: { _controller: KnpIpsumBundle:DoctrineOdm:delete }
+    requirements:
+        id: ^[0-9a-z]*$

@@ -28,6 +28,9 @@ knp_ipsum_avalanche_imagine:
 knp_ipsum_doctrine_orm:
     resource: "@KnpIpsumBundle/Resources/config/routing/doctrine_orm.yml"
 
+knp_ipsum_doctrine_odm:
+    resource: "@KnpIpsumBundle/Resources/config/routing/doctrine_odm.yml"
+
 knp_ipsum_assetic:
     resource: "@KnpIpsumBundle/Resources/config/routing/assetic.yml"
 
