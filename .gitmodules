@@ -124,3 +124,12 @@
 [submodule "vendor/bundles/FOS/UserBundle"]
 	path = vendor/bundles/FOS/UserBundle
 	url = http://github.com/FriendsOfSymfony/FOSUserBundle.git
+[submodule "vendor/doctrine-mongodb"]
+	path = vendor/doctrine-mongodb
+	url = http://github.com/doctrine/mongodb.git
+[submodule "vendor/doctrine-mongodb-odm"]
+	path = vendor/doctrine-mongodb-odm
+	url = http://github.com/doctrine/mongodb-odm.git
+[submodule "vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle"]
+	path = vendor/bundles/Symfony/Bundle/DoctrineMongoDBBundle
+	url = http://github.com/symfony/DoctrineMongoDBBundle.git
