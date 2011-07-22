@@ -3,7 +3,7 @@
 namespace Knp\IpsumBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Knp\IpsumBundle\Document\Thing;
+use Knp\IpsumBundle\Document\Product;
 use Knp\IpsumBundle\Document\Category;
 
 class DoctrineOdmController extends Controller
@@ -11,10 +11,10 @@ class DoctrineOdmController extends Controller
     public function indexAction()
     {
         $dm = $this->get('doctrine.odm.mongodb.document_manager');
-        $things = $dm->getRepository('KnpIpsumBundle:Thing')->findAll();
+        $products = $dm->getRepository('KnpIpsumBundle:Product')->findAll();
 
         return $this->render('KnpIpsumBundle:DoctrineOdm:index.html.twig', array(
-            'things' => $things,
+            'products' => $products,
         ));
     }
 
@@ -22,22 +22,22 @@ class DoctrineOdmController extends Controller
     {
         $dm = $this->get('doctrine.odm.mongodb.document_manager');
 
-        // Let's create a new thing
-        $thing = new Thing();
-        $thing->setName('Lorem'.\uniqid());
+        // Let's create a new product
+        $product = new Product();
+        $product->setName('Lorem'.\uniqid());
 
-        $dm->persist($thing);
+        $dm->persist($product);
 
         //Lets create a new category
         $category = new Category();
         $category->setName('Category'.\uniqid());
 
-        $thing->setCategory($category);
+        $product->setCategory($category);
 
         $dm->flush();
 
         return $this->render('KnpIpsumBundle:DoctrineOdm:create.html.twig', array(
-            'thing' => $thing,
+            'product' => $product,
         ));
     }
 
@@ -49,13 +49,13 @@ class DoctrineOdmController extends Controller
         // If you don't get why, the internet has the answer you're looking for
 
         $dm = $this->get('doctrine.odm.mongodb.document_manager');
-        $thing = $dm->getRepository('KnpIpsumBundle:Thing')->find($id);
+        $product = $dm->getRepository('KnpIpsumBundle:Product')->find($id);
 
-        if (!$thing) {
-            throw $this->createNotFoundException("Thing with id '$id' not found");
+        if (!$product) {
+            throw $this->createNotFoundException("Product with id '$id' not found");
         }
 
-        $dm->remove($thing);
+        $dm->remove($product);
         $dm->flush();
 
         return $this->render('KnpIpsumBundle:DoctrineOdm:delete.html.twig');

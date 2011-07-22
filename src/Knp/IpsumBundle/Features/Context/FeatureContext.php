@@ -72,12 +72,12 @@ class FeatureContext extends MinkContext
     }
 
     /**
-     * @Given /^there is no things in collection$/
+     * @Given /^there is no products in collection$/
      */
-    public function thereIsNoThingsInCollection()
+    public function thereIsNoProductsInCollection()
     {
         $this->getDocumentManager()
-            ->createQueryBuilder('KnpIpsumBundle:Thing')
+            ->createQueryBuilder('KnpIpsumBundle:Product')
             ->remove()
             ->getQuery()
             ->execute();
@@ -87,5 +87,4 @@ class FeatureContext extends MinkContext
     {
         return $this->getContainer()->get('doctrine.odm.mongodb.document_manager');
     }
-
 }

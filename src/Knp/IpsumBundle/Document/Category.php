@@ -20,62 +20,61 @@ class Category
     protected $name;
 
     /**
-    * @MongoDB\ReferenceMany(targetDocument="Knp\IpsumBundle\Document\Thing", cascade={"persist"})
+    * @MongoDB\ReferenceMany(targetDocument="Knp\IpsumBundle\Document\Product", cascade={"persist"})
     */
-    protected $thing = array();
-
+    protected $product = array();
     public function __construct()
     {
-        $this->thing = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->product = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
+    
     /**
-    * Get id
-    *
-    * @return id $id
-    */
+     * Get id
+     *
+     * @return id $id
+     */
     public function getId()
     {
         return $this->id;
     }
 
     /**
-    * Set name
-    *
-    * @param string $name
-    */
+     * Set name
+     *
+     * @param string $name
+     */
     public function setName($name)
     {
         $this->name = $name;
     }
 
     /**
-    * Get name
-    *
-    * @return string $name
-    */
+     * Get name
+     *
+     * @return string $name
+     */
     public function getName()
     {
         return $this->name;
     }
 
     /**
-    * Add thing
-    *
-    * @param Knp\IpsumBundle\Document\Thing $thing
-    */
-    public function addThing(\Knp\IpsumBundle\Document\Thing $thing)
+     * Add product
+     *
+     * @param Knp\IpsumBundle\Document\Product $product
+     */
+    public function addProduct(\Knp\IpsumBundle\Document\Product $product)
     {
-        $this->thing[] = $thing;
+        $this->product[] = $product;
     }
 
     /**
-    * Get thing
-    *
-    * @return Doctrine\Common\Collections\Collection $thing
-    */
-    public function getThing()
+     * Get product
+     *
+     * @return Doctrine\Common\Collections\Collection $product
+     */
+    public function getProduct()
     {
-        return $this->thing;
+        return $this->product;
     }
 }
