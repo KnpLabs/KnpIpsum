@@ -15,6 +15,7 @@ class DoctrineOdmController extends Controller
 
         return $this->render('KnpIpsumBundle:DoctrineOdm:index.html.twig', array(
             'products' => $products,
+            'extra'    => array('php' => array('Knp\IpsumBundle\Document\Product', 'Knp\IpsumBundle\Document\Category'))
         ));
     }
 

@@ -35,7 +35,7 @@ class IpsumExtension extends \Twig_Extension
         return rtrim(preg_replace('@^( *\n)*(.*)@s', '$2', htmlspecialchars($code, ENT_QUOTES, 'UTF-8')), "\n\t \r");
     }
 
-    public function getCode($template)
+    public function getCode($template, $extraFiles = array())
     {
         $controllerPath = $this->getControllerPath();
         $templatePath = $this->getTemplatePath($template);
@@ -61,6 +61,21 @@ FEATURE;
             $featureContent = '';
         }
 
+        //get extra files
+        $extraContent = "<h1>Extra Code</h1>";
+        $basePath = realpath(__DIR__ . '/../../../../');
+        foreach ($extraFiles as $ext => $collection) {
+            foreach ($collection as  $namespace) {
+                $namespace = str_replace('\\','/',$namespace.'.'.$ext);
+                $filePath = $basePath.'/'.$namespace;
+                $fileContent = htmlspecialchars(file_get_contents($filePath), ENT_QUOTES, 'UTF-8');
+                $extraContent .= <<<EOF
+<span class="code_path">$namespace</span>
+<pre class="code_block"><code>$fileContent</code></pre>
+EOF;
+            }
+        }
+
         return <<<EOF
 $featureContent
 <h1>Controller Code</h1>
@@ -70,6 +85,8 @@ $featureContent
 <h1>Template Code</h1>
 <span class="code_path">$templatePath</span>
 <pre class="code_block"><code>$template</code></pre>
+
+$extraContent
 EOF;
     }
 
