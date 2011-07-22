@@ -13,6 +13,19 @@ doctrine:
         user:     root
         password: ~
 
+doctrine_mongodb:
+    connections:
+        default:
+            server: mongodb://localhost:27017
+            options:
+                connect: true
+    default_database: ipsum_dev
+    document_managers:
+        default:
+            auto_mapping: true
+            mappings:
+                StofDoctrineExtensionsBundle: false
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: smtp
