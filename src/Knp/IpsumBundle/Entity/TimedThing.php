@@ -57,6 +57,16 @@ class TimedThing
      */
     private $updatedAt;
 
+    /**
+     * Constructor
+     *
+     */
+    function __construct()
+    {
+        $now = new \DateTime();
+        $this->setCreatedAt($now);
+        $this->setUpdatedAt($now);
+    }
 
     /**
      * Get id
