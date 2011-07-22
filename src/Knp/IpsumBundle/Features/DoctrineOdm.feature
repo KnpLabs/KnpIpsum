@@ -4,7 +4,7 @@ Feature: Doctrine ODM
   I need to be able to use Doctrine2 ODM
 
   Background:
-    Given there is no things in database
+    Given there is no things in collection
 
   Scenario: There is a "Doctrine ODM [MongoDB]" link on home page
     Given I am on "/"
@@ -14,16 +14,16 @@ Feature: Doctrine ODM
     Given I am on "/"
     When I follow "Doctrine ODM [MongoDB]"
     Then I should see "List of things"
-    And should see "List all \"things\" in your database"
-    And should see "Create a new \"thing\" entry in your database"
+    And should see "List all \"things\" in your collection"
+    And should see "Create a new \"thing\" entry in your collection"
 
   Scenario: User sees empty list by default
     Given I am on "/doctrine-odm"
-    When I follow "List all \"things\" in your database"
+    When I follow "List all \"things\" in your collection"
     Then I should see "There are no things yet!"
 
   Scenario: User creates a new "thing" entry
     Given I am on "/doctrine-odm"
-    When I follow "Create a new \"thing\" entry in your database"
+    When I follow "Create a new \"thing\" entry in your collection"
     Then I should see "You have created a new Thing called \"Lorem"
     And I should see "in a new category called \"Category"

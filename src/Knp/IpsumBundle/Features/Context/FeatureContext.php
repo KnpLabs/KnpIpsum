@@ -70,4 +70,22 @@ class FeatureContext extends MinkContext
     {
         return $this->getContainer()->get('doctrine')->getEntityManager();
     }
+
+    /**
+     * @Given /^there is no things in collection$/
+     */
+    public function thereIsNoThingsInCollection()
+    {
+        $this->getDocumentManager()
+            ->createQueryBuilder('KnpIpsumBundle:Thing')
+            ->remove()
+            ->getQuery()
+            ->execute();
+    }
+
+    protected function getDocumentManager()
+    {
+        return $this->getContainer()->get('doctrine.odm.mongodb.document_manager');
+    }
+
 }
