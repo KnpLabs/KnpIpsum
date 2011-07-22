@@ -88,9 +88,7 @@ knp_menu:
 stof_doctrine_extensions:
     orm:
         default:
-            translatable: false
-            loggable: false
-            tree: false
+            timestampable: true
 
 fos_rest:
     normalizers:
