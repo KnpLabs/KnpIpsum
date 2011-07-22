@@ -15,7 +15,7 @@ class PagerfantaController extends Controller
         $query = $em->createQuery('SELECT t FROM KnpIpsumBundle:Thing t');
         $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
         $paginator->setMaxPerPage(10);
-        $paginator->setCurrentPage($this->get('request')->query->get('page', 1));
+        $paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
 
         return $this->render('KnpIpsumBundle:Pagerfanta:index.html.twig', array(
             'paginator' => $paginator,
