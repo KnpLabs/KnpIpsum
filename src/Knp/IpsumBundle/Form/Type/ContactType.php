@@ -20,4 +20,9 @@ class ContactType extends AbstractType
             'data_class' => 'Knp\IpsumBundle\Form\Model\Contact',
         );
     }
+
+    public function getName()
+    {
+        return 'knpipsumbundle_contact';
+    }
 }
