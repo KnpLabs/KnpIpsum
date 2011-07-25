@@ -9,10 +9,12 @@ class IpsumExtension extends \Twig_Extension
 {
     protected $loader;
     protected $controller;
+    protected $environment;
 
-    public function __construct(FilesystemLoader $loader)
+    public function __construct(FilesystemLoader $loader, $environment)
     {
-        $this->loader = $loader;
+        $this->loader      = $loader;
+        $this->environment = $environment;
     }
 
     public function setController($controller)
@@ -37,6 +39,10 @@ class IpsumExtension extends \Twig_Extension
 
     public function getCode($template)
     {
+        if ('test' === $this->environment) {
+            return;
+        }
+
         $controllerPath = $this->getControllerPath();
         $templatePath = $this->getTemplatePath($template);
 
