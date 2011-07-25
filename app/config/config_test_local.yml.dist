@@ -14,7 +14,10 @@ doctrine:
         password: ~
 
 # Enables Mink and configure it
-behat_mink:
+mink:
     base_url:  http://change_me.local/app_dev.php/
 #    goutte: ~
 #    default_session: goutte
+
+# Enables Behat
+behat: ~

@@ -14,7 +14,7 @@ swiftmailer:
     disable_delivery: true
 
 # Enables Mink and configure it
-behat_mink:
+mink:
     base_url:  http://knpipsum-for-symfony.dev/app_test.php/
 
 # Enables Behat
