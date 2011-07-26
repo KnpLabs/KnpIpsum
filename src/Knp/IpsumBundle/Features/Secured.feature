@@ -3,9 +3,6 @@ Feature: Security
   As a Symfony2 developer
   I need to be able to use security component
 
-  Background:
-    Given I go to "/secured/logout"
-
   Scenario: There is a "Security" link on home page
     Given I am on "/"
     Then I should see "Security"

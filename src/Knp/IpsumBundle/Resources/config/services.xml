@@ -8,6 +8,7 @@
         <service id="twig.extension.knplabs.ipsum" class="Knp\IpsumBundle\Twig\Extension\IpsumExtension" public="false">
             <tag name="twig.extension" />
             <argument type="service" id="twig.loader" />
+            <argument>%kernel.environment%</argument>
         </service>
 
         <service id="knplabs.ipsum.listener" class="Knp\IpsumBundle\EventListener\ControllerListener">

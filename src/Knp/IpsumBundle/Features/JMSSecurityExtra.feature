@@ -3,9 +3,6 @@ Feature: JMS SecurityExtra
   As a Symfony2 developer
   I need to be able to use security component with annotations
 
-  Background:
-    Given I go to "/secured/logout"
-
   Scenario: There is a "JMSSecurityExtraBundle" link on home page
     Given I am on "/"
     Then I should see "JMSSecurityExtraBundle"
