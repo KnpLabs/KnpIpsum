@@ -5,15 +5,9 @@ KnpIpsum is a demo application using the most successful bundles. It lets you
 discover some of their features and shows you the code used to achieve the
 result.
 
-So it's not exactly the Symfony2 tutorial we wanted first but rather a
-comprehensive set of examples.
-
-The demo is available online at http://knpipsum.knplabs.com
+The demo is available online at http://ipsum.knplabs.com
 
 Browse the code on [github](https://github.com/knplabs/KnpIpsum-for-symfony).
-
-You can also [download a clean ready-to-use zipball](http://j.mp/jeyTPY) 
-as your base project (no git history).
 
 Requirements
 ------------
@@ -24,6 +18,7 @@ Requirements
 Installation
 ------------
 
+    git clone git://github.com/knplabs/KnpIpsum-for-symfony.git
     git submodule update --init
 
 To install the assets in the web folder, launch the following commands:
