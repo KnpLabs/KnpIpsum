@@ -6,9 +6,29 @@
     {% block content_gedmo %}
     {% endblock %}
 
+    <h1 style="margin-top: 40px">What are the Gedmo Doctrine Extensions?</h1>
+    <ul>
+        <p><strong>Gedmo Doctrine Extensions</strong> are <b><i>behavioral extensions</i></b> that offers functionalities and tools for Doctrine2.</p>
+        <p> It have event listeners that can handle <strong>ODM/Mongo</strong> and <strong>ORM</strong> object persistense in the behavioral way.</p>
+
+    </ul>
+    <h1 style="margin-top: 40px">What behaviors has Gedmo?</h1>
+    <ul>
+        <li><b>Tree</b> - this extension automates the tree handling process and adds some tree specific functions on repository. (closure or nestedset)</li>
+        <li><b>Translatable</b> - gives you a very handy solution for translating records into diferent languages. Easy to setup, easier to use.</li>
+        <li><b>Sluggable</b> - urlizes your specified fields into single unique slug</li>
+        <li><b>Timestampable</b> - updates date fields on create, update and even property change.</li>
+        <li><b>Loggable</b> - helps tracking changes and history of objects, also supports version managment.</li>
+        <li><b>Sortable</b> - makes any document or entity sortable</li>
+    </ul>
     <h1 style="margin-top: 40px">What can I do with Gedmo?</h1>
     <ul>
         <li><a href="{{ path('knp_ipsum_gedmo_extensions') }}">List all "timed things" in our table</a></li>
         <li><a href="{{ path('knp_ipsum_gedmo_extensions_create') }}">Create a new "timed thing" entry in your database</a></li>
+    </ul>
+    <h1 style="margin-top: 40px">Where can i read more about Gedmo?</h1>
+    <ul>
+        <li><a href="http://gediminasm.org/articles">Gediminas Morkevičius Blog</a></li>
+        <li><a href="https://github.com/l3pp4rd/DoctrineExtensions/tree/master/doc">Github doc's repository</a></li>
     </ul>
 {% endblock %}
