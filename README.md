@@ -48,6 +48,19 @@ Note:
     to create the database. If it is not the case, create an empty database
     by hand and use the second command to create the tables.
 
+Doctrine Extensions
+-------------------
+
+This package contains extensions for Doctrine 2 that hook into the facilities of Doctrine and offer new functionality or tools to use Doctrine 2 more efficently. This package contains mostly used behaviors which can be easily attached to your event system of Doctrine 2 and handle the records being flushed in the behavioral way. List of extensions:
+
+* Tree - this extension automates the tree handling process and adds some tree specific functions on repository. (closure or nestedset)
+* Translatable - gives you a very handy solution for translating records into diferent languages. Easy to setup, easier to use.
+* Sluggable - urlizes your specified fields into single unique slug
+* Timestampable - updates date fields on create, update and even property change.
+* Loggable - helps tracking changes and history of objects, also supports version managment.
+* Sortable - makes any document or entity sortable
+
+**Note:** This text was extracted from the README file in https://github.com/l3pp4rd/DoctrineExtensions.git , you should read it and browse behaviors docs here: https://github.com/l3pp4rd/DoctrineExtensions/tree/master/doc
 
 DoctrineFixturesBundle
 ----------------------
