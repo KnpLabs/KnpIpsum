@@ -5,15 +5,9 @@ KnpIpsum is a demo application using the most successful bundles. It lets you
 discover some of their features and shows you the code used to achieve the
 result.
 
-So it's not exactly the Symfony2 tutorial we wanted first but rather a
-comprehensive set of examples.
-
-The demo is available online at http://knpipsum.knplabs.com
+The demo is available online at http://ipsum.knplabs.com
 
 Browse the code on [github](https://github.com/knplabs/KnpIpsum-for-symfony).
-
-You can also [download a clean ready-to-use zipball](http://j.mp/jeyTPY) 
-as your base project (no git history).
 
 Requirements
 ------------
@@ -24,6 +18,7 @@ Requirements
 Installation
 ------------
 
+    git clone git://github.com/knplabs/KnpIpsum-for-symfony.git
     git submodule update --init
 
 To install the assets in the web folder, launch the following commands:
@@ -53,7 +48,6 @@ Note:
     to create the database. If it is not the case, create an empty database
     by hand and use the second command to create the tables.
 
-
 DoctrineFixturesBundle
 ----------------------
 
@@ -61,6 +55,24 @@ To load the fixtures (default location in `src/Knp/IpsumBundle/DataFixtures/ORM`
 use the following command:
 
     php app/console doctrine:fixtures:load
+
+Doctrine ODM
+------------
+
+Note:
+    Currently we are using MongoDB, so you need to have MongoDB installed
+    and configured to be used with PHP. Also you don't have to create your
+    database yourself, MongoDB can take care of it.
+    If you don't have MongoDB installed go to
+    [MongoDB Quickstart](http://www.mongodb.org/display/DOCS/Quickstart)
+
+To create the database and collections and load them with fixtures data:
+
+    php app/console doctrine:mongodb:fixtures:load
+
+If you just want to create the database and collections:
+
+    php app/console doctrine:mongodb:schema:create
 
 BehatBundle
 -----------
