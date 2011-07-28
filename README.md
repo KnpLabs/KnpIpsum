@@ -63,9 +63,8 @@ Note:
     Currently we are using MongoDB, so you need to have MongoDB installed
     and configured to be used with PHP. Also you don't have to create your
     database yourself, MongoDB can take care of it.
-
-    If you don't have MongoDB installed go to [MongoDB Quickstart]
-    (http://www.mongodb.org/display/DOCS/Quickstart)
+    If you don't have MongoDB installed go to
+    [MongoDB Quickstart](http://www.mongodb.org/display/DOCS/Quickstart)
 
 To create the database and collections and load them with fixtures data:
 
