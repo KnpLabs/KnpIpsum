@@ -25,7 +25,7 @@ class ProductFixtures implements FixtureInterface
 
         for ($i = 0; $i < 20; $i++) {
             $product = new Product();
-            $product->setName('Dummy thing '.$i);
+            $product->setName('Dummy product '.$i);
             $product->setCategory($categoryCat);
             $dm->persist($product);
         }
