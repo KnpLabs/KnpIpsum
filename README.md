@@ -48,7 +48,6 @@ Note:
     to create the database. If it is not the case, create an empty database
     by hand and use the second command to create the tables.
 
-
 DoctrineFixturesBundle
 ----------------------
 
@@ -56,6 +55,25 @@ To load the fixtures (default location in `src/Knp/IpsumBundle/DataFixtures/ORM`
 use the following command:
 
     php app/console doctrine:fixtures:load
+
+Doctrine ODM
+------------
+
+Note:
+    Currently we are using MongoDB, so you need to have MongoDB installed
+    and configured to be used with PHP. Also you don't have to create your
+    database yourself, MongoDB can take care of it.
+
+    If you don't have MongoDB installed go to [MongoDB Quickstart]
+    (http://www.mongodb.org/display/DOCS/Quickstart)
+
+To create the database and collections and load them with fixtures data:
+
+    php app/console doctrine:mongodb:fixtures:load
+
+If you just want to create the database and collections:
+
+    php app/console doctrine:mongodb:schema:create
 
 BehatBundle
 -----------
