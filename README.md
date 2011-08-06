@@ -19,7 +19,7 @@ Installation
 ------------
 
     git clone git://github.com/knplabs/KnpIpsum-for-symfony.git
-    git submodule update --init
+    bin/vendors install
 
 To install the assets in the web folder, launch the following commands:
 
@@ -79,7 +79,7 @@ BehatBundle
 
 To launch behat tests (located in the bundle Features directory):
 
-    php app/console --env=test behat:bundle KnpIpsumBundle
+    php app/console --env=test behat @KnpIpsumBundle
 
 Swift Mailer
 ------------
