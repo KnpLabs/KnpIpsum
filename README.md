@@ -79,7 +79,7 @@ BehatBundle
 
 To launch behat tests (located in the bundle Features directory):
 
-    php app/console --env=test behat:bundle KnpIpsumBundle
+    php app/console --env=test behat @KnpIpsumBundle
 
 Swift Mailer
 ------------
