@@ -19,7 +19,7 @@ Installation
 ------------
 
     git clone git://github.com/knplabs/KnpIpsum-for-symfony.git
-    git submodule update --init
+    bin/vendors install
 
 To install the assets in the web folder, launch the following commands:
 
