@@ -3,10 +3,6 @@
 {% block title "FOSUserBundle Tutorial" %}
 
 {% block content %}
-    <div class="content-margin">
-        {% block fos_user_content %}{% endblock %}
-    </div>
-
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <h1>You're logged in!</h1>
         {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
@@ -14,6 +10,10 @@
             {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
         </a>
     {% endif %}
+
+    <div class="content-margin">
+        {% block fos_user_content %}{% endblock %}
+    </div>
 
     {% for key, flash in app.session.getFlashes() %}
     <div class="{{ flash }}" style="margin-bottom: 5px;">
@@ -23,6 +23,7 @@
 
     <h1>What can I do with FOSUserBundle?</h1>
     <ul>
+        <li><a href="{{ path('fos_user_security_login') }}">Log in (you can use username <strong>john</strong> with password <strong>doe</strong>)</a></li>
         <li><a href="{{ path('fos_user_registration_register') }}">Create a new account</a></li>
         <li><a href="{{ path('fos_user_profile_show') }}">See your profile</a></li>
         <li><a href="{{ path('fos_user_security_logout') }}">Log out</a></li>
