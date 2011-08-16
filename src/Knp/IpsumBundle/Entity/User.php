@@ -2,7 +2,7 @@
 
 namespace Knp\IpsumBundle\Entity;
 
-use FOS\UserBundle\Entity\User as BaseUSer;
+use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
