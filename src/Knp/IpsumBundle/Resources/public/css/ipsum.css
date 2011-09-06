@@ -53,7 +53,7 @@ span.code_path { display: block; background: #ccc; padding: 5px; width: 918px; f
 .ipsum-content h1 { font-size: 26px; }
 .ipsum-code-behind h1 { font-size: 18px; padding: 20px 0 10px 0; }
 
-input[type=text], input[type=password] { border: 1px solid #DADADA; background: white url(../images/field-background.gif) repeat-x left top; padding: 5px 6px; color: #565656; font-family: 'Lucida Sans Unicode', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
+input[type=text], input[type=password], input[type=email] { border: 1px solid #DADADA; background: white url(../images/field-background.gif) repeat-x left top; padding: 5px 6px; color: #565656; font-family: 'Lucida Sans Unicode', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
 .ipsum-button-grey,
 .ipsum-button-green { font-size: 0.85em; font-weight: bold; cursor: pointer; display: inline-block; outline: none; text-align: center; text-transform: uppercase; padding: 3px 10px; text-shadow: 0 1px 1px rgba(0,0,0,.3); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 .ipsum-button-grey { color: #868686; font-weight: normal; padding: 5px 10px; border: solid 1px #d7d7d7; background: #ffffff; background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d7d7d7)); background: -moz-linear-gradient(top,  #ffffff,  #d7d7d7); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d7d7d7'); }
