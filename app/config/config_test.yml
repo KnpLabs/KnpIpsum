@@ -6,6 +6,13 @@ framework:
     session:
         storage_id: session.storage.filesystem
 
+doctrine:
+    dbal:
+        dbname:   ipsum_test
+
+doctrine_mongodb:
+    default_database: ipsum_test
+
 web_profiler:
     toolbar: false
     intercept_redirects: false
