@@ -7,7 +7,7 @@ result.
 
 The demo is available online at http://ipsum.knplabs.com
 
-Browse the code on [github](https://github.com/knplabs/KnpIpsum-for-symfony).
+Browse the code on [github](https://github.com/knplabs/KnpIpsum).
 
 Requirements
 ------------
@@ -18,7 +18,7 @@ Requirements
 Installation
 ------------
 
-    git clone git://github.com/knplabs/KnpIpsum-for-symfony.git
+    git clone git://github.com/knplabs/KnpIpsum.git
     bin/vendors install
 
 To install the assets in the web folder, launch the following commands:
@@ -98,6 +98,6 @@ Reporting an issue
 
 If you have some issue with KnpIpsum or if your bundle is not presented
 the good way in the demo, please open a ticket on the
-[github issue tracker](https://github.com/knplabs/KnpIpsum-for-symfony/issues)
+[github issue tracker](https://github.com/knplabs/KnpIpsum/issues)
 
 Enjoy!
