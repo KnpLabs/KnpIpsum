@@ -5,6 +5,13 @@ framework:
     router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
     profiler: { only_exceptions: false }
 
+doctrine:
+    dbal:
+        dbname:   ipsum_dev
+
+doctrine_mongodb:
+    default_database: ipsum_dev
+
 web_profiler:
     toolbar: true
     intercept_redirects: false
