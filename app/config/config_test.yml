@@ -22,7 +22,7 @@ swiftmailer:
 
 # Enables Mink and configure it
 mink:
-    base_url:  http://knpipsum-for-symfony.dev/app_test.php/
+    base_url:  http://knpipsum.dev/app_test.php/
 
 # Enables Behat
 behat: ~
