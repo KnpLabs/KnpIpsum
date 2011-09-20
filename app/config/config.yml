@@ -66,9 +66,9 @@ doctrine_mongodb:
 swiftmailer:
     transport: smtp
 
+# JMS Security Extra Simplest Configuration
 jms_security_extra:
     secure_controllers:  true
-    secure_all_services: false
 
 avalanche_imagine:
     web_root:     %kernel.root_dir%/../web
@@ -90,10 +90,10 @@ stof_doctrine_extensions:
         default:
             timestampable: true
 
-fos_rest:
-    normalizers:
-        - knp_ipsum.normalizer.datetime
-        - fos_rest.get_set_method_normalizer
+# fos_rest:
+#     handlers:
+#         - knp_ipsum.normalizer.datetime
+#         - fos_rest.get_set_method_normalizer
 
 fos_user:
     db_driver: orm

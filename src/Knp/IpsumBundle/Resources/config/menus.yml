@@ -1,0 +1,14 @@
+services:
+    # you'll just need this
+    knp_ipsum.menu_builder:
+        class: Knp\IpsumBundle\Menu\MenuBuilder
+        arguments: ['@knp_menu.factory']
+
+    knp_ipsum.menu.demo:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: knp_ipsum.menu_builder
+        factory_method: createDemoMenu
+        arguments: ['@request']
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: demo } # The alias is what is used to retrieve the menu

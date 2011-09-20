@@ -44,6 +44,7 @@
 [JMSSecurityExtraBundle]
     git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
     target=/bundles/JMS/SecurityExtraBundle
+    version=1.0.0
 
 [SensioDistributionBundle]
     git=http://github.com/sensio/SensioDistributionBundle.git
@@ -90,6 +91,9 @@
 [AvalancheImagineBundle]
     git=http://github.com/avalanche123/AvalancheImagineBundle.git
     target=/bundles/Avalanche/Bundle/ImagineBundle
+
+[knp-menu]
+    git=https://github.com/knplabs/KnpMenu.git
 
 [KnpMenuBundle]
     git=http://github.com/knplabs/KnpMenuBundle.git
