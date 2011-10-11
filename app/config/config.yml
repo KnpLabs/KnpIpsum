@@ -84,6 +84,7 @@ avalanche_imagine:
 
 knp_menu:
     twig: true
+    default_renderer: twig
 
 stof_doctrine_extensions:
     orm:

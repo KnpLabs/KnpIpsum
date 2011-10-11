@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="menu.ipsum.class">Knp\IpsumBundle\Menu\IpsumMenu</parameter>
+    </parameters>
+
+    <services>
+        <service id="menu.ipsum" class="%menu.ipsum.class%" scope="request">
+            <tag name="knp_menu.menu" alias="ipsum" />
+            <argument type="service" id="request" />
+            <argument type="service" id="router" />
+        </service>
+    </services>
+
+</container>
