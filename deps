@@ -1,34 +1,34 @@
 [symfony]
     git=http://github.com/symfony/symfony.git
-    version=v2.0.0
+    version=origin/2.0
 
 [twig]
     git=http://github.com/fabpot/Twig.git
-    version=v1.1.1
+    version=v1.1.2
 
 [monolog]
     git=http://github.com/Seldaek/monolog.git
-    version=1.0.0
+    version=1.0.1
 
 [doctrine-common]
     git=http://github.com/doctrine/common.git
-    version=2.1.0
+    version=origin/2.1.x
 
 [doctrine-dbal]
     git=http://github.com/doctrine/dbal.git
-    version=2.1.0
+    version=origin/2.1.x
 
 [doctrine]
     git=http://github.com/doctrine/doctrine2.git
-    version=2.1.0
+    version=origin/2.1.x
 
 [swiftmailer]
     git=http://github.com/swiftmailer/swiftmailer.git
-    version=v4.1.0
+    version=v4.1.2
 
 [assetic]
     git=http://github.com/kriswallsmith/assetic.git
-    version=v1.0.1
+    version=v1.0.2
 
 [twig-extensions]
     git=http://github.com/fabpot/Twig-extensions.git
@@ -44,11 +44,12 @@
 [JMSSecurityExtraBundle]
     git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
     target=/bundles/JMS/SecurityExtraBundle
-    version=1.0.0
+    version=origin/1.0.x
 
 [SensioDistributionBundle]
     git=http://github.com/sensio/SensioDistributionBundle.git
     target=/bundles/Sensio/Bundle/DistributionBundle
+    version=origin/1.0
 
 [SensioGeneratorBundle]
     git=http://github.com/sensio/SensioGeneratorBundle.git
@@ -57,7 +58,7 @@
 [AsseticBundle]
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
-    version=v1.0.0RC2
+    version=v1.0.1
 
 [doctrine-mongodb]
     git=http://github.com/doctrine/mongodb.git
@@ -87,6 +88,7 @@
 [Imagine]
     git=http://github.com/avalanche123/Imagine.git
     target=imagine
+    version=origin/master
 
 [AvalancheImagineBundle]
     git=http://github.com/avalanche123/AvalancheImagineBundle.git
