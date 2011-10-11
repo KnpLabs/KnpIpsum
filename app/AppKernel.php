@@ -26,9 +26,6 @@ class AppKernel extends Kernel
             // new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
-            new Sonata\BluePrintBundle\SonataBluePrintBundle(),
-            new Sonata\AdminBundle\SonataAdminBundle(),
             new Knp\IpsumBundle\KnpIpsumBundle(),
         );
 
