@@ -112,10 +112,6 @@
     git=http://github.com/FriendsOfSymfony/FOSUserBundle.git
     target=/bundles/FOS/UserBundle
 
-[FOSRestBundle]
-    git=http://github.com/FriendsOfSymfony/FOSRestBundle.git
-    target=/bundles/FOS/RestBundle
-
 [pagerfanta]
     git=http://github.com/whiteoctober/Pagerfanta.git
 

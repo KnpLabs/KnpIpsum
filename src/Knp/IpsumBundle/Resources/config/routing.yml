@@ -40,9 +40,6 @@ knp_ipsum_swiftmailer:
 knp_ipsum_gedmo_extensions:
     resource: "@KnpIpsumBundle/Resources/config/routing/gedmo_extensions.yml"
 
-knp_ipsum_fos_rest:
-    resource: "@KnpIpsumBundle/Resources/config/routing/fos_rest.yml"
-
 knp_ipsum_fos_user:
     resource: "@KnpIpsumBundle/Resources/config/routing/fos_user.yml"
 

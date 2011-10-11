@@ -91,11 +91,6 @@ stof_doctrine_extensions:
         default:
             timestampable: true
 
-# fos_rest:
-#     handlers:
-#         - knp_ipsum.normalizer.datetime
-#         - fos_rest.get_set_method_normalizer
-
 fos_user:
     db_driver: orm
     firewall_name: fos_user
