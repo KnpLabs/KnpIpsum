@@ -95,10 +95,10 @@
     target=/bundles/Avalanche/Bundle/ImagineBundle
 
 [knp-menu]
-    git=https://github.com/knplabs/KnpMenu.git
+    git=https://github.com/KnpLabs/KnpMenu.git
 
 [KnpMenuBundle]
-    git=http://github.com/knplabs/KnpMenuBundle.git
+    git=http://github.com/KnpLabs/KnpMenuBundle.git
     target=/bundles/Knp/Bundle/MenuBundle
 
 [gedmo-doctrine-extensions]
