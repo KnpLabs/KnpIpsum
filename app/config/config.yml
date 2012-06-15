@@ -70,18 +70,6 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
 
-avalanche_imagine:
-    web_root:     %kernel.root_dir%/../web
-    cache_prefix: imagine
-    driver:       gd
-    filters:
-        thumbnail:
-            type:    thumbnail
-            options: { size: [300, 300], mode: outbound }
-        little_nice_thumbnail:
-            type:    thumbnail
-            options: { size: [150, 150], mode: outbound }
-
 knp_menu:
     twig: true
     default_renderer: twig

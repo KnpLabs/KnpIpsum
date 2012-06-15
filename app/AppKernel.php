@@ -21,7 +21,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-            //new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new FOS\UserBundle\FOSUserBundle(),
