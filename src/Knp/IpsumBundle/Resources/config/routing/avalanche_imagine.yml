@@ -1,3 +1,0 @@
-knp_ipsum_avalanche_imagine:
-    pattern:  /avalanche-imagine
-    defaults: { _controller: KnpIpsumBundle:AvalancheImagine:index }

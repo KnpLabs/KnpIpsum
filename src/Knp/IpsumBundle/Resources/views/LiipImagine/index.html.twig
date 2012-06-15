@@ -1,0 +1,31 @@
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "LiipImagineBundle Tutorial" %}
+
+{% block content %}
+    <h1>A first filter ("thumbnail")</h1>
+    <div>
+        <img src="{{ 'bundles/knpipsum/images/edgar-in-black.jpg'|imagine_filter('thumbnail') }}" />
+    </div>
+
+    <h1>A second filter ("little_nice_thumbnail")</h1>
+    <div>
+        <img src="{{ 'bundles/knpipsum/images/edgar-in-black.jpg'|imagine_filter('little_nice_thumbnail') }}" />
+    </div>
+
+    <h1>Configuration</h1>
+    <p>Here is the configuration we use to make these filters work. It's usually located in app/config.yml.</p>
+
+    <pre>
+    liip_imagine:
+        filter_sets:
+            thumbnail:
+                filters:
+                    thumbnail: { size: [300, 300], mode: outbound }
+            little_nice_thumbnail:
+                filters:
+                    thumbnail: { size: [150, 150], mode: outbound }
+    </pre>
+{% endblock %}
+
+{% set code = code(_self) %}

@@ -1,5 +1,5 @@
 {
-    "hash": "d86465f140ad7f603e5dbf22bc3bc8c6",
+    "hash": "2af3bb808e23abcd4158e21ad820e705",
     "packages": [
         {
             "package": "doctrine/common",
@@ -66,6 +66,10 @@
             "source-reference": "03165f515adf6db5c5a0714e1127375d7ecdd15e"
         },
         {
+            "package": "imagine/Imagine",
+            "version": "v0.2.8"
+        },
+        {
             "package": "jms/aop-bundle",
             "version": "1.0.0"
         },
@@ -105,6 +109,11 @@
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
             "source-reference": "d6f89a3170c5280ad554347dc113eb25fdf00ad7"
+        },
+        {
+            "package": "liip/imagine-bundle",
+            "version": "dev-master",
+            "source-reference": "af69ffeb020a8b32c86dc37d8724f791dfa09ce5"
         },
         {
             "package": "monolog/monolog",
@@ -208,6 +217,7 @@
         "doctrine/doctrine-migrations-bundle": 20,
         "doctrine/doctrine-fixtures-bundle": 20,
         "stof/doctrine-extensions-bundle": 20,
-        "knplabs/knp-menu-bundle": 20
+        "knplabs/knp-menu-bundle": 20,
+        "liip/imagine-bundle": 20
     }
 }

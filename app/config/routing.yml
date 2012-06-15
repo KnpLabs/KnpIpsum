@@ -1,6 +1,6 @@
-#_imagine:
-#    resource: .
-#    type:     imagine
+_imagine:
+    resource: .
+    type:     imagine
 
 knp_ipsum:
     resource: "@KnpIpsumBundle/Resources/config/routing.yml"

@@ -25,7 +25,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            //new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
 
             new Knp\IpsumBundle\KnpIpsumBundle(),
 
