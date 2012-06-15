@@ -1,5 +1,5 @@
 {
-    "hash": "2af3bb808e23abcd4158e21ad820e705",
+    "hash": "d73f47bd38bf1fb050c4faf67006a653",
     "packages": [
         {
             "package": "doctrine/common",
@@ -90,6 +90,11 @@
             "version": "1.1.0"
         },
         {
+            "package": "knplabs/knp-components",
+            "version": "dev-master",
+            "source-reference": "4fb9bc439351cfe32af05cd127bfabf725f11966"
+        },
+        {
             "package": "knplabs/knp-menu",
             "version": "1.1.x-dev",
             "source-reference": "v1.1.2"
@@ -98,6 +103,11 @@
             "package": "knplabs/knp-menu-bundle",
             "version": "dev-master",
             "source-reference": "v1.1.0"
+        },
+        {
+            "package": "knplabs/knp-paginator-bundle",
+            "version": "dev-master",
+            "source-reference": "427db8350ae57659645ba35480bbe1194c1c695f"
         },
         {
             "package": "kriswallsmith/assetic",
@@ -218,6 +228,7 @@
         "doctrine/doctrine-fixtures-bundle": 20,
         "stof/doctrine-extensions-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
-        "liip/imagine-bundle": 20
+        "liip/imagine-bundle": 20,
+        "knplabs/knp-paginator-bundle": 20
     }
 }

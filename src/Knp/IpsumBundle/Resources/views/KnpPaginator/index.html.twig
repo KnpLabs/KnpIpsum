@@ -1,20 +1,20 @@
 {% extends "KnpIpsumBundle::layout.html.twig" %}
 
-{% block title "Pagerfanta Tutorial" %}
+{% block title "KnpPaginatorBundle Tutorial" %}
 
 {% block content %}
     <h1>Paginated list of things</h1>
 
     <p>Here is the list of things from your database:</p>
 
-    {% if paginator|length > 0 %}
+    {% if pagination|length > 0 %}
         <ul>
-        {% for thing in paginator %}
+        {% for thing in pagination %}
             <li>* {{ thing.identifyYourselfPlease }}</li>
         {% endfor %}
         </ul>
         <div class="pagerfanta">
-            {{ pagerfanta(paginator, 'default') }}
+            {{ pagination.render()|raw }}
         </div>
     {% else %}
         <p>− There are no things yet!</p>

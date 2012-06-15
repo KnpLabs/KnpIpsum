@@ -43,5 +43,5 @@ knp_ipsum_gedmo_extensions:
 knp_ipsum_fos_user:
     resource: "@KnpIpsumBundle/Resources/config/routing/fos_user.yml"
 
-knp_ipsum_pagerfanta:
-    resource: "@KnpIpsumBundle/Resources/config/routing/pagerfanta.yml"
+knp_ipsum_knp_paginator:
+    resource: "@KnpIpsumBundle/Resources/config/routing/knp_paginator.yml"

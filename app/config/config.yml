@@ -91,3 +91,5 @@ liip_imagine:
         little_nice_thumbnail:
             filters:
                 thumbnail: { size: [150, 150], mode: outbound }
+
+knp_paginator: ~

@@ -1,0 +1,3 @@
+knp_ipsum_knp_paginator:
+    pattern:  /knp-paginator
+    defaults: { _controller: KnpIpsumBundle:KnpPaginator:index }
