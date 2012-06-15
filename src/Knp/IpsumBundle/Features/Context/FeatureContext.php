@@ -10,6 +10,7 @@ use Behat\Behat\Context\BehatContext,
     Behat\Behat\Exception\PendingException;
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
+use Behat\Behat\Context\Step\Given;
 
 use Knp\IpsumBundle\Entity\Thing,
     Knp\IpsumBundle\Entity\TimedThing;
@@ -47,6 +48,46 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
     }
 
     /**
+     * @Given /^I am on homepage$/
+     */
+    public function iAmOnHomepage()
+    {
+        return new Given('I am on "/"');
+    }
+
+    /**
+     * @Given /^I am on Doctrine ODM \(MongoDB\) page$/
+     */
+    public function iAmOnDoctrineODMMongoDBPage()
+    {
+        return new Given('I am on "/doctrine-odm"');
+    }
+
+    /**
+     * @Given /^I am on Doctrine ORM page$/
+     */
+    public function iAmOnDoctrineORMPage()
+    {
+        return new Given('I am on "/doctrine-orm"');
+    }
+
+    /**
+     * @Given /^I am on Form page$/
+     */
+    public function iAmOnFormPage()
+    {
+        return new Given('I am on "/form"');
+    }
+
+    /**
+     * @Given /^I am on Secured page$/
+     */
+    public function iAmOnSecuredPage()
+    {
+        return new Given('I am on "/secured"');
+    }
+
+    /**
      * @Given /^I am not logged in$/
      */
     public function iAmNotLoggedIn()
@@ -58,9 +99,9 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
     }
 
     /**
-     * @Given /^there is no things in database$/
+     * @Given /^there are no things in database$/
      */
-    public function thereIsNoThingsInDatabase()
+    public function thereAreNoThingsInDatabase()
     {
         $this->getEntityManager()
             ->createQuery('DELETE KnpIpsumBundle:Thing')
@@ -72,7 +113,7 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
      */
     public function thereAreThingsInDatabase($count)
     {
-        $this->thereIsNoThingsInDatabase();
+        $this->thereAreNoThingsInDatabase();
 
         $em = $this->getEntityManager();
         for ($i = 0; $i < intval($count); $i++) {
@@ -103,9 +144,9 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
     }
 
     /**
-     * @Given /^there is no products in collection$/
+     * @Given /^there are no products in collection$/
      */
-    public function thereIsNoProductsInCollection()
+    public function thereAreNoProductsInCollection()
     {
         $this->getDocumentManager()
             ->createQueryBuilder('KnpIpsumBundle:Product')

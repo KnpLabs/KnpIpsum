@@ -3,12 +3,8 @@ Feature: Twig templates
   As a Symfony2 developer
   I need to be able to use Twig
 
-  Scenario: There is a "Template" link on home page
-    Given I am on "/"
-    Then I should see "Template"
-
   Scenario: User clicks "Template" link on home page
-    Given I am on "/"
+    Given I am on homepage
     When I follow "Template"
     Then I should see "Hello World, how are you today"
 
