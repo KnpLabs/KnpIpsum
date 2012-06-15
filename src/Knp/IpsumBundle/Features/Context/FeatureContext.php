@@ -47,6 +47,17 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
     }
 
     /**
+     * @Given /^I am not logged in$/
+     */
+    public function iAmNotLoggedIn()
+    {
+        $this->getMink()
+            ->getSession()
+            ->visit($this->locatePath('/secured/logout'))
+        ;
+    }
+
+    /**
      * @Given /^there is no things in database$/
      */
     public function thereIsNoThingsInDatabase()

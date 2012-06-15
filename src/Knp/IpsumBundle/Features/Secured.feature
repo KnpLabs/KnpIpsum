@@ -13,7 +13,8 @@ Feature: Security
     Then I should see "Simple page only for authenticated users"
 
   Scenario Outline: User logins
-    Given I am on "/secured"
+    Given I am not logged in
+    And I am on "/secured"
     When I follow "Secured page for admins only"
     And I fill in "Username" with "<username>"
     And fill in "Password" with "<password>"

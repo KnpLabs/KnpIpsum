@@ -13,7 +13,8 @@ Feature: JMS SecurityExtra
     Then I should see "Login"
 
   Scenario Outline: User logins
-    Given I am on "/"
+    Given I am not logged in
+    And I am on "/"
     When I follow "JMSSecurityExtraBundle"
     And I fill in "Username" with "<username>"
     And fill in "Password" with "<password>"
