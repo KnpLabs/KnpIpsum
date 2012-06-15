@@ -1,5 +1,5 @@
 {
-    "hash": "23aeebade5dd76cdde16fa93706d56b4",
+    "hash": "d86465f140ad7f603e5dbf22bc3bc8c6",
     "packages": [
         {
             "package": "doctrine/common",
@@ -118,7 +118,7 @@
         {
             "package": "sensio/framework-extra-bundle",
             "version": "dev-master",
-            "source-reference": "e00b525b14784ea4f21c14945e58b4a76a530a6a"
+            "source-reference": "d6087182597e9831ecee510c2a64880fad883c22"
         },
         {
             "package": "sensio/generator-bundle",
