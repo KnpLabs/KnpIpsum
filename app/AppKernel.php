@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            new JMS\AopBundle\JMSAopBundle(),
 
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
@@ -27,6 +28,8 @@ class AppKernel extends Kernel
             //new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
 
             new Knp\IpsumBundle\KnpIpsumBundle(),
+
+            new JMS\DiExtraBundle\JMSDiExtraBundle($this)
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

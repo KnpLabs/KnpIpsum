@@ -10,7 +10,6 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] }
     session:
-        default_locale: en
         auto_start:     true
     translator: ~
 
@@ -67,8 +66,7 @@ swiftmailer:
     transport: smtp
 
 # JMS Security Extra Simplest Configuration
-jms_security_extra:
-    secure_controllers:  true
+jms_security_extra: ~
 
 knp_menu:
     twig: true
