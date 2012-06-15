@@ -1,6 +1,38 @@
 {
-    "hash": "d73f47bd38bf1fb050c4faf67006a653",
+    "hash": "e53926cd2615de1bd756113e92d3563a",
     "packages": [
+        {
+            "package": "behat/behat",
+            "version": "v2.4.0"
+        },
+        {
+            "package": "behat/common-contexts",
+            "version": "dev-master",
+            "source-reference": "ac7499e648cc2f786a912e1adb4d5d40bdb40e38"
+        },
+        {
+            "package": "behat/gherkin",
+            "version": "v2.2.1"
+        },
+        {
+            "package": "behat/mink",
+            "version": "v1.4.0"
+        },
+        {
+            "package": "behat/mink-browserkit-driver",
+            "version": "dev-master",
+            "source-reference": "b07a3908fed61cd31953ddaa6faeb66767cf9d6e"
+        },
+        {
+            "package": "behat/mink-extension",
+            "version": "dev-master",
+            "source-reference": "cf279daf0aaf82d21ffd20ebe25f19552ab09cd3"
+        },
+        {
+            "package": "behat/symfony2-extension",
+            "version": "dev-master",
+            "source-reference": "6c8478e1b072d3d6af29364be50e8122db0c30cd"
+        },
         {
             "package": "doctrine/common",
             "version": "2.2.2"
@@ -229,6 +261,11 @@
         "stof/doctrine-extensions-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
         "liip/imagine-bundle": 20,
-        "knplabs/knp-paginator-bundle": 20
+        "knplabs/knp-paginator-bundle": 20,
+        "behat/behat": 0,
+        "behat/symfony2-extension": 20,
+        "behat/mink-extension": 20,
+        "behat/mink-browserkit-driver": 20,
+        "behat/common-contexts": 20
     }
 }

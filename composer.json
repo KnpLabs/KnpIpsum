@@ -25,7 +25,13 @@
         "stof/doctrine-extensions-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "dev-master",
         "liip/imagine-bundle": "dev-master",
-        "knplabs/knp-paginator-bundle": "dev-master"
+        "knplabs/knp-paginator-bundle": "dev-master",
+
+        "behat/behat": "2.4@stable",
+        "behat/symfony2-extension": "dev-master",
+        "behat/mink-extension": "dev-master",
+        "behat/mink-browserkit-driver": "dev-master",
+        "behat/common-contexts": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
