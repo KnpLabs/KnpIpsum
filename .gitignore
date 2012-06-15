@@ -8,3 +8,4 @@ app/config/config_*_local.yml
 .idea/*
 /app/bootstrap.php.cache
 /vendor/*
+composer.phar
