@@ -12,6 +12,7 @@ framework:
     session:
         auto_start:     true
     translator: ~
+    default_locale: en
 
 # Twig Configuration
 twig:
