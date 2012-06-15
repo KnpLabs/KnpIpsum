@@ -91,11 +91,6 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
         $em->flush();
     }
 
-    protected function getEntityManager()
-    {
-        return $this->kernel->getContainer()->get('doctrine')->getEntityManager();
-    }
-
     /**
      * @Given /^there is no products in collection$/
      */
@@ -106,6 +101,11 @@ class FeatureContext extends MinkContext implements KernelAwareInterface
             ->remove()
             ->getQuery()
             ->execute();
+    }
+
+    protected function getEntityManager()
+    {
+        return $this->kernel->getContainer()->get('doctrine')->getEntityManager();
     }
 
     protected function getDocumentManager()
