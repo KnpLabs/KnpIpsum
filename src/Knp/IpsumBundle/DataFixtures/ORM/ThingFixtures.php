@@ -2,13 +2,15 @@
 
 namespace Knp\IpsumBundle\DataFixtures\ORM;
 
-use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+
 use Knp\IpsumBundle\Entity\Thing;
 use Knp\IpsumBundle\Entity\Category;
 
-class ThingFixtures implements FixtureInterface
+class ThingFixtures extends AbstractFixture
 {
-    public function load($em)
+    public function load(ObjectManager $em)
     {
         $cat = new Thing();
         $cat->setName('Edgar the Cat');

@@ -22,8 +22,8 @@ knp_ipsum_jms_securityextra:
 knp_ipsum_knp_menu:
     resource: "@KnpIpsumBundle/Resources/config/routing/knp_menu.yml"
 
-knp_ipsum_avalanche_imagine:
-    resource: "@KnpIpsumBundle/Resources/config/routing/avalanche_imagine.yml"
+knp_ipsum_liip_imagine:
+    resource: "@KnpIpsumBundle/Resources/config/routing/liip_imagine.yml"
 
 knp_ipsum_doctrine_orm:
     resource: "@KnpIpsumBundle/Resources/config/routing/doctrine_orm.yml"
@@ -43,5 +43,5 @@ knp_ipsum_gedmo_extensions:
 knp_ipsum_fos_user:
     resource: "@KnpIpsumBundle/Resources/config/routing/fos_user.yml"
 
-knp_ipsum_pagerfanta:
-    resource: "@KnpIpsumBundle/Resources/config/routing/pagerfanta.yml"
+knp_ipsum_knp_paginator:
+    resource: "@KnpIpsumBundle/Resources/config/routing/knp_paginator.yml"

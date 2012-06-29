@@ -4,16 +4,16 @@ Feature: Form component
   I need to be able to use forms
 
   Scenario: There is a "Forms" link on home page
-    Given I am on "/"
+    Given I am on homepage
     Then I should see "Forms"
 
   Scenario: User clicks "Forms" link on home page
-    Given I am on "/"
+    Given I am on homepage
     When I follow "Forms"
     Then I should see "A sample contact form"
 
   Scenario: User fills and submits contact form
-    Given I am on "/form"
+    Given I am on Form page
     When I fill in "Your email:" with "konstantin.kudryashov@knplabs.com"
     And fill in "Your delightful message:" with "test message"
     And press "Send"

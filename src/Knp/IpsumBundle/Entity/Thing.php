@@ -17,7 +17,7 @@ class Thing
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length="255")
+     * @ORM\Column(type="string", length=255)
      */
     protected $name;
 

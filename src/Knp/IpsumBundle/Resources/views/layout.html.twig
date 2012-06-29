@@ -32,9 +32,9 @@
             <div id="ipsum-security">{% block security %}{% endblock %}</div>
             <h1 class="content-title">{{ block('title') }}</h1>
 
-            {% if app.session.flash('notice') %}
+            {% if app.session.hasFlash('notice') %}
                 <div class="flash-message">
-                    <em>Notice</em>: {{ app.session.flash('notice') }}
+                    <em>Notice</em>: {{ app.session.getFlash('notice') }}
                 </div>
             {% endif %}
 

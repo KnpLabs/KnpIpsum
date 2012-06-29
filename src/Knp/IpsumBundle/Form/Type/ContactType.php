@@ -3,22 +3,23 @@
 namespace Knp\IpsumBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class ContactType extends AbstractType
 {
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('email', 'text', array('required' => true, 'label' => 'Your email:'));
         $builder->add('message', 'textarea', array('required' => true, 'label' => 'Your delightful message:'));
         $builder->add('attachment', 'file', array('required' => false, 'label' => 'Your attachment:'));
     }
 
-    public function getDefaultOptions(array $options)
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        return array(
+        $resolver->setDefaults(array(
             'data_class' => 'Knp\IpsumBundle\Form\Model\Contact',
-        );
+        ));
     }
 
     public function getName()
