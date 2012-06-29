@@ -17,5 +17,9 @@
         </service>
 
         <service id="knp_ipsum.normalizer.datetime" class="Knp\IpsumBundle\Serializer\Normalizer\DateTimeNormalizer" />
+
+        <service id="knp_ipsum.form.type.file_with_help" class="Knp\IpsumBundle\Form\Type\FileWithHelpType">
+            <tag name="form.type" alias="file_with_help" />
+        </service>
     </services>
 </container>

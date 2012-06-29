@@ -1,0 +1,23 @@
+{% form_theme form _self %}
+
+{% block file_with_help_widget %}
+    {{ block('field_widget') }}
+    <sup>{{ help }}</sup>
+{% endblock file_with_help_widget %}
+
+{% extends "KnpIpsumBundle::layout.html.twig" %}
+
+{% block title "Symfony Custom Form Type Tutorial" %}
+
+{% block content %}
+    <h1>A sample contact form with a custom form type</h1>
+
+    <form action="" method="POST" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}
+
+        {{ form_rest(form) }}
+        <input type="submit" value="Send" />
+    </form>
+{% endblock %}
+
+{% set code = code(_self) %}

@@ -1,3 +1,7 @@
 knp_ipsum_form:
     pattern:  /form
     defaults: { _controller: KnpIpsumBundle:Form:contact }
+
+knp_ipsum_form_with_custom:
+    pattern:  /form-with-custom
+    defaults: { _controller: KnpIpsumBundle:Form:contactWithCustom }
