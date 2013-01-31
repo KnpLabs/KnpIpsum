@@ -10,9 +10,9 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] }
     session:
-        default_locale: en
         auto_start:     true
     translator: ~
+    default_locale: en
 
 # Twig Configuration
 twig:
@@ -67,20 +67,7 @@ swiftmailer:
     transport: smtp
 
 # JMS Security Extra Simplest Configuration
-jms_security_extra:
-    secure_controllers:  true
-
-avalanche_imagine:
-    web_root:     %kernel.root_dir%/../web
-    cache_prefix: imagine
-    driver:       gd
-    filters:
-        thumbnail:
-            type:    thumbnail
-            options: { size: [300, 300], mode: outbound }
-        little_nice_thumbnail:
-            type:    thumbnail
-            options: { size: [150, 150], mode: outbound }
+jms_security_extra: ~
 
 knp_menu:
     twig: true
@@ -95,3 +82,14 @@ fos_user:
     db_driver: orm
     firewall_name: fos_user
     user_class: Knp\IpsumBundle\Entity\User
+
+liip_imagine:
+    filter_sets:
+        thumbnail:
+            filters:
+                thumbnail: { size: [300, 300], mode: outbound }
+        little_nice_thumbnail:
+            filters:
+                thumbnail: { size: [150, 150], mode: outbound }
+
+knp_paginator: ~

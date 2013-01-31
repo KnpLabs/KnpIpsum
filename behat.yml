@@ -1,0 +1,6 @@
+default:
+  extensions:
+    Behat\Symfony2Extension\Extension:
+        mink_driver: true
+    Behat\MinkExtension\Extension:
+        default_session: 'symfony2'

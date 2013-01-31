@@ -19,10 +19,3 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
-
-# Enables Mink and configure it
-mink:
-    base_url:  http://knpipsum.dev/app_test.php/
-
-# Enables Behat
-behat: ~

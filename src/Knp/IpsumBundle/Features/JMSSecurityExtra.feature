@@ -3,17 +3,14 @@ Feature: JMS SecurityExtra
   As a Symfony2 developer
   I need to be able to use security component with annotations
 
-  Scenario: There is a "JMSSecurityExtraBundle" link on home page
-    Given I am on "/"
-    Then I should see "JMSSecurityExtraBundle"
-
   Scenario: User clicks "JMSSecurityExtraBundle" link on home page
-    Given I am on "/"
+    Given I am on homepage
     When I follow "JMSSecurityExtraBundle"
     Then I should see "Login"
 
   Scenario Outline: User logins
-    Given I am on "/"
+    Given I am not logged in
+    And I am on homepage
     When I follow "JMSSecurityExtraBundle"
     And I fill in "Username" with "<username>"
     And fill in "Password" with "<password>"

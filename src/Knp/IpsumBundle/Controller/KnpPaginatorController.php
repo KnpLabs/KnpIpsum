@@ -6,19 +6,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Pagerfanta\Pagerfanta;
 use Pagerfanta\Adapter\DoctrineORMAdapter;
 
-class PagerfantaController extends Controller
+class KnpPaginatorController extends Controller
 {
     public function indexAction()
     {
         $em = $this->get('doctrine')->getEntityManager();
         /* @var $em \Doctrine\ORM\EntityManager */
         $query = $em->createQuery('SELECT t FROM KnpIpsumBundle:Thing t');
-        $paginator = new Pagerfanta(new DoctrineORMAdapter($query));
-        $paginator->setMaxPerPage(10);
-        $paginator->setCurrentPage($this->get('request')->query->get('page', 1), false, true);
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query,
+            $this->get('request')->query->get('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
 
-        return $this->render('KnpIpsumBundle:Pagerfanta:index.html.twig', array(
-            'paginator' => $paginator,
+        return $this->render('KnpIpsumBundle:KnpPaginator:index.html.twig', array(
+            'pagination' => $pagination,
         ));
     }
 }

@@ -2,12 +2,14 @@
 
 namespace Knp\IpsumBundle\DataFixtures\ORM;
 
-use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+
 use Knp\IpsumBundle\Entity\TimedThing;
 
-class TimedThingFixtures implements FixtureInterface
+class TimedThingFixtures extends AbstractFixture
 {
-    public function load($em)
+    public function load(ObjectManager $em)
     {
         $cat = new TimedThing();
         $cat->setName('Edgar the Cat');

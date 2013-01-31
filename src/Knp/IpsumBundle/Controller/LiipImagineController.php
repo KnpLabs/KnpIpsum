@@ -4,10 +4,10 @@ namespace Knp\IpsumBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class AvalancheImagineController extends Controller
+class LiipImagineController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('KnpIpsumBundle:AvalancheImagine:index.html.twig');
+        return $this->render('KnpIpsumBundle:LiipImagine:index.html.twig');
     }
 }
