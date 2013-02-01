@@ -9,3 +9,4 @@ app/config/config_*_local.yml
 /app/bootstrap.php.cache
 /vendor/*
 composer.phar
+bin/*
