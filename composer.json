@@ -29,7 +29,7 @@
         "knplabs/knp-paginator-bundle": "dev-master"
     },
     "require-dev": {
-        "behat/behat": "2.4@stable",
+        "behat/behat": "2.4.*",
         "behat/symfony2-extension": "dev-master",
         "behat/mink-extension": "dev-master",
         "behat/mink-browserkit-driver": "dev-master",
