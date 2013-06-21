@@ -1,4 +1,4 @@
-## NB! This project is no longer maintained by KNP Labs
+## This project is no longer maintained by KNP Labs
 
 It is still good demo project to get started with Symfony2, but it will no longer recieve updates.
 
