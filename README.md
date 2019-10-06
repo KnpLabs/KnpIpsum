@@ -1,6 +1,6 @@
 ## This project is no longer maintained by KNP Labs
 
-It is still good demo project to get started with Symfony2, but it will no longer recieve updates.
+It is still good demo project to get started with Symfony2, but it will no longer receive updates.
 
 KnpIpsum: a demo Symfony2 application
 =====================================
