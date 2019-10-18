@@ -97,6 +97,11 @@ Test it
 The main page of the application is configured at `/`. Access it via
 `web/app_dev.php/`.
 
+Maintainers
+-------
+Please read this [post](https://knplabs.com/en/blog/news-for-our-foss-projects-maintenance) first.
+
+
 Reporting an issue
 ------------------
 
