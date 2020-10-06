@@ -105,3 +105,16 @@ the good way in the demo, please open a ticket on the
 [github issue tracker](https://github.com/knplabs/KnpIpsum/issues)
 
 Enjoy!
+
+## Maintainers
+
+KNPLabs is looking for maintainers ([see why](https://knplabs.com/en/blog/news-for-our-foss-projects-maintenance)).
+
+If you are interested, feel free to open a PR to ask to be added as a maintainer.
+
+We’ll be glad to hear from you :)
+
+
+## Credits
+
+KNPIpsum has been originally developed by the [KnpLabs](http://knplabs.com) team.
